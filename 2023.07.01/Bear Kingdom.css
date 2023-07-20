@@ -1,0 +1,170 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  display: block;
+}
+
+.box0{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.box1{
+  align-items: center;
+  border: 3px solid gray;
+  margin: 0 auto;
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.hot1{
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  background-color: firebrick;
+}
+.hot1 img{
+  
+  width: 200px;
+  height: 200px;
+  object-fit:cover;
+}
+.hot1:nth-child(1)  {
+  align-items: center;
+  background-color: cadetblue;
+}
+.hot1:nth-child(1) a {
+  margin-top: 50%;
+  transform: translateY(-50%);
+ font-weight: 700;
+ font-size: 30px;
+ color: aqua;
+  
+}
+.hot1:nth-child(1):hover{
+background-color: transparent;
+}
+.hot1:nth-child(2):hover{
+  opacity: .7;
+  box-shadow: 3px 1px 2px black;
+}
+.hot1:nth-child(3):hover{
+  border: 4px solid violet;
+  opacity: .7;
+  box-shadow: 3px 1px 2px black;
+}
+.hot1:nth-child(4):hover{
+  opacity: .7;
+  box-shadow: 3px 1px 2px black;
+}
+.hot1:nth-child(5):hover{
+  opacity: .7;
+  box-shadow: 3px 1px 2px black;
+}
+
+
+
+
+
+.box3.on{
+  display: block;
+}
+.box3{
+  display: none;
+  background-color: #FFF;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+ left: 35%;
+  transform: translateY(-50%);
+  width: 30%;
+  height: 60%;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 3px solid gray;
+}
+.box4 {
+  clear: both;
+}
+
+.hot2 > a {
+  float: left;
+  padding: 1rem;
+}
+.hot2 button{
+  border: none;
+  background-color: transparent;
+  padding: 12px;
+  float: right;
+  cursor: pointer;
+}
+.dox5 img{
+  border-top:3px solid gray ;
+  width: 100%;
+  height: 100%;
+}
+.hot3{
+  text-align: center;
+  
+}
+
+.box6.one{
+  display: block;
+}
+.box6{
+  display: none;
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 35%;
+  width:30% ;
+  height: 60vh;
+  border-radius: 10px;
+  border: 3px solid gray;
+  overflow: hidden;
+}
+.hot4 img{
+  border-top: 2px solid gray;
+  width: 100%;
+  height: 300px;
+ 
+}
+.box7{
+  clear: both;
+}
+.box7 a{
+  float: left;
+  color: green;
+}
+.box7 button{
+  border: none;
+  background-color: transparent;
+  float: right;
+}
+.box7 a,
+.box7 button{
+  padding: 16px;
+  font-size: 20px;
+}
+.hot4 > p{
+  color: firebrick;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+
+
