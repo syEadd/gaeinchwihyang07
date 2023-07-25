@@ -31,7 +31,28 @@ box2.addEventListener('click',function(egg){
 })
 
 
+let box3 = document.querySelector('.hot1:nth-child(4) img');
+let ggo = document.querySelector('.box9 button');
+console.log(ggo)
 
+
+
+box3.addEventListener('click',function(a){
+a.preventDefault()
+
+setTimeout(function(){
+    document.querySelector('.box8').classList.add('add')
+
+  },5000)
+  
+  
+})
+
+
+ggo.addEventListener('click',function(ww){
+  ww.preventDefault()
+  document.querySelector('.box8').classList.remove('add')
+})
 
 
 

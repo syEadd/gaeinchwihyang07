@@ -167,4 +167,50 @@ background-color: transparent;
 }
 
 
+/* 이미지 위칸*/
+
+.box8{
+  display: none;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  background-color: #FFF;
+  top: 50%;
+  position: absolute;
+  width: 30%;
+  height: 70%;
+  border-radius: 10px;
+  border: 3px solid gray;
+}
+.box8.add{
+  display: block;
+}
+
+.box8 p{
+  text-align: center;
+}
+
+.box9{
+  clear: both;
+}
+.box9 a{
+  float: left;
+}
+.box9 button{
+  float: right;
+  background-color: transparent;
+  border: none;
+}
+.box9 a,
+.box9 button{
+  padding: 14px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.hot5 img{
+  /* overflow: hidden; */
+  width: 100%;
+  border-top:2px solid gray ;
+}
+
 
