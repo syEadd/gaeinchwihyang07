@@ -12,20 +12,43 @@ li{
 }
 .h1{
 position: relative;
+border: 3px solid goldenrod;
 width: 100vw;
 height: 100vh;
+overflow: hidden;
 }
 /* 1번 화면 */
 .nav1{
   display: flex;
   width: 400vw;
+  
 }
 .nav1 li{
   height: 100vh;
   border: 3px solid darkblue;
   width: 100vw;
+  
 }
-
+.nav1 img{
+  width: 100vw;
+  height: 100vh;
+  
+}
+/* 방향키 */
+.arrow-key1{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 90px;
+}
+.arrow-key2{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 90px;
+  height: 90px;
+}
 
 .main{
   position: absolute;
