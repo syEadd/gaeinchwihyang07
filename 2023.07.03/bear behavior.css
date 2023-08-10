@@ -10,18 +10,24 @@ a{
 li{
   list-style: none;
 }
+button{
+  border: none;
+  background-color: transparent;
+}
+
 .h1{
 position: relative;
 border: 3px solid goldenrod;
 width: 100vw;
 height: 100vh;
 overflow: hidden;
+
 }
 /* 1번 화면 */
 .nav1{
   display: flex;
   width: 400vw;
-  
+  transition: transform 300ms;
 }
 .nav1 li{
   height: 100vh;
@@ -37,20 +43,31 @@ overflow: hidden;
 /* 방향키 */
 .arrow-key1{
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 90px;
-  height: 90px;
+  top: 50%;
+  transform:translateY(-50%);
+  left: 50px;
+  font-size: 40px;
+    
 }
-.arrow-key2{
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 90px;
-  height: 90px;
+.arrow-key1 i{
+  color: chartreuse;
 }
 
+.arrow-key2{
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  transform:translateY(-50%);
+  right: 50px;
+}
+.arrow-key2 i{
+  color: chartreuse;
+ 
+}
+
+/* 경고 판 */
 .main{
+  z-index: 100;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -66,13 +83,14 @@ overflow: hidden;
   font-weight: 600;
   
 }
+
  
 /* 2번의 위치 스크로 가능 ??되면  이동 */
 
 .h2{
   position: relative;
 }
-.h2 div{
+.h2 .manual-1{
   position: sticky;
   top: 0;
   left: 0;
@@ -82,8 +100,33 @@ overflow: hidden;
   display: flex;
   height: 100px;
   font-weight: 700;
-  background-color: cadetblue;
+  background-color: rgb(196, 230, 232);
+  padding: 16px;
+
 }
+.h2 .manual-1 a{
+ 
+  color: black;
+  
+}
+
+/* 로고 */
+
+.manual-2{
+  border: 3px solid gold;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.img1{
+  /
+}
+.img1 img{
+  padding: 20px 0;
+  width: 200px;
+  height: 500px;
+}
+
 
 /* 도움이 */
 .png{
