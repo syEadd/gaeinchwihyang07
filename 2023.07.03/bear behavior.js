@@ -21,3 +21,30 @@ btn.addEventListener('click', function(e){
     main.style.transform = 'translateX(-' + time * 100 + 'vw)'
   }
 })
+
+;
+const btn2 = document.querySelectorAll('.main-bar');
+
+
+btn2.forEach(function(off){
+ 
+  const baron = off.querySelector('.None');
+  console.log(baron)
+  
+   off.addEventListener('mouseover',function(e){
+    //  e.preventDefault()
+     baron.classList.add('at');
+     //  this.querySelector('.None').classList.add('at');
+    })
+    
+    
+    off.addEventListener('mouseleave',function(e){
+      // e.preventDefault()
+      baron.classList.remove('at');
+      // document.querySelectorAll('.None')[0].classList.remove('at');
+      // this.querySelector('.None').classList.remove('at');
+    
+    
+  })
+
+})
