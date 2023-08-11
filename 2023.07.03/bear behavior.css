@@ -222,9 +222,8 @@ overflow: hidden;
   background-color: aqua;
   height: 50px;
   overflow: hidden;
-  display: none;
   max-width: 0;
-  
+  transition: max-width 200ms ease-in-out;
 }
 
 .None li a{
@@ -269,6 +268,7 @@ overflow: hidden;
   right: 0;
   top: 0;
   animation: master 5s infinite ease-in-out;
+ 
 }
 
 @keyframes master {
