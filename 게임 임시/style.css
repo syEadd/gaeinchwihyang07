@@ -1,0 +1,18 @@
+.main-up{
+  position: relative;
+}
+.box-on{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: .5;
+}
+.automobile{
+  position: absolute;
+  top: 20%
+
+
+}
