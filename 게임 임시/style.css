@@ -1,7 +1,13 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
 .main-up{
   position: relative;
 }
 .box-on{
+  z-index: 200;
   position: fixed;
   top: 0;
   left: 0;
@@ -15,54 +21,62 @@
 }
 /* 오픈 화면 */
 .automobile{
+  z-index: 300;
   position: absolute;
   top: 20%;
   right: 30%;
   
 }
 .automobile-2{
+  z-index: 300;
   position: absolute;
   top: 10%;
   right: 50%;
-
+  
 }
 .automobile-3{
+  z-index: 300;
   position: absolute;
   top: 50px;
   right: 50%;
 }
 .automobile-4{
+  z-index: 300;
   position: absolute;
   top: 130px;
   right: 30%;
 }
 /* 물줄기 */
 .Watercourses-left{
-position: absolute;
-top: 410px;
-right: -20px ;
+  z-index: 300;
+  position: absolute;
+  top: 410px;
+  right: -20px ;
 }
 .Watercourses-right{
+  z-index: 300;
   position: absolute;
   top: 410px;
   left: -20px;
 }
 .ho{
-margin: 10px;
-width: 420px;
-height: 30px;
-text-align: center;
+  margin: 10px;
+  width: 420px;
+  height: 30px;
+  text-align: center;
 }
 .hoh{
-position: relative;
-width: 100%;
-height: 100%;
-background-color: black;
-opacity: .5;
-border-radius: 20px;
-
+  z-index: 300;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: .5;
+  border-radius: 20px;
+  
 }
 .num{
+  z-index: 300;
   position: absolute;
   top:0;
   content:'';
@@ -71,7 +85,7 @@ border-radius: 20px;
   background-color: aqua;
 }
 
-/* 방향키 */
+/*물줄기 방향키 */
 .right{
   right: 0;
   border-radius: 0px 20px 20px 0px;
@@ -81,12 +95,152 @@ border-radius: 20px;
   border-radius: 20px 0px 0px 20px;
 }
 
-.num1{
+/* 모바일 메뉴 */
+
+.icon-main{
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  width: 100%;
+  height: 100px;
+  background-color: skyblue;
+}
+.icon{
+  color: rgb(68, 68, 232);
+  font-weight: 700;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 400px;
+  font-size: 21px;
+}
+
+.Sign-up{
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+  
+}
+.Mobile{
+  display: flex;
+  align-items: center;
+}
+.Mobile-no{
+  display: none;
+}
+
+.loge{
+  width: 150px;
+  margin-left: 40px;
+  margin-bottom: 10px;
+}
+
+.loge img{
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+/* 검색창 */
+.Search-settings{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.Search-settings i{
   position: absolute;
-  top:0;
-  right:0;
-  content:'';
-  width: 50%;
-  height: 20px;
-  background-color: aqua;
+  top: 10;
+  left: 10px;
+  color: #CCC;
+}
+#search{
+  width: 200px;
+  height: 30px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+#search:focus{
+  border: 2px solid blue;
+  outline: none;
+}
+
+
+#Search-button{
+  height: 30px;
+  width: 60px;;
+  font-weight: 600;
+  border: none;
+  background-color: cadetblue;
+  box-shadow: 3px 2px 1px rgb(45, 77, 79);
+}
+
+
+ /* 사이드바 */
+ a{
+  display: block;
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+/* 아래칸 배경 */
+.Sidebar{
+  background-color: #CCC;
+  display: flex;
+  width: 100%;
+  height: 100% ;
+  text-align: center;
+}
+
+.Sidebar > li > a{
+  border: 2px solid gold;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 16px;
+  text-align: center;
+  background-color: rgb(124, 111, 187);
+}
+.Sidebar > li > a:hover{
+  background-color: hsl(84, 63%, 46%);
+  color: skyblue;
+}
+.Sidebar > li{
+  width: calc(100%/7);
+}
+
+
+.Sidebar-nav{
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 300ms ease-in-out;
+
+}
+
+.saideuba-on{
+  max-height: 100%;
+  
+}
+
+
+.Sidebar li ul li > a{
+  font-size: 15px;
+  border: 2px solid darkgoldenrod;
+  padding: 8px;
+  color: green;
+}
+.Sidebar li ul li > a:hover{
+  color: darkblue;
+  font-weight: 600;
+  background-color: deepskyblue;
+}
+
+/* 메인 */
+.moniteo-seteu{
+  display: flex;
+  height: 100px;
+  width: 800px;
+}
+
+.moniteo-seteu li{
+  width: 200px
+  
 }
