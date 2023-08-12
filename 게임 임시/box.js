@@ -1,5 +1,11 @@
 const container = document.querySelectorAll('.ho')
 
+setTimeout(function(){
+document.querySelector('.main-up').classList.add('box-off');
+//clearInterval(clock);
+//타이머가 밖에 있을때 setInterval
+},5000)
+
 // 오프닝 화 면 
 
 container.forEach(function(som){
@@ -20,11 +26,11 @@ container.forEach(function(som){
   // 초기값 0
   let Zero = 0;
 
-  // 타이머 시계 변수
-  let clock ; 
-
   
-  clock = setInterval(function(){
+  
+  
+  // 타이머 시계 변수
+ let clock = setInterval(function(){
     // 초기값을 증감식 사용
     Zero++
     // if(초기값으로 <=  number="100" 적용)
@@ -38,12 +44,30 @@ container.forEach(function(som){
 
 })
 
-setTimeout(function(){
-document.querySelector('.main-up').classList.add('box-off');
-clearInterval(clock)
-},5000)
 
 
+
+
+
+// 사이드 바
+
+
+
+const Sidebar = document.querySelectorAll('.Sidebar > li');
+console.log(Sidebar)
+Sidebar.forEach(function(box){
+const nav = box.querySelector('.Sidebar-nav');
+
+box.addEventListener('mouseover',function(){
+nav.classList.add('saideuba-on');
+
+})
+box.addEventListener('mouseleave',function(){
+  nav.classList.remove('saideuba-on');
+
+})
+
+})
 
 
 
