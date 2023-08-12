@@ -19,7 +19,7 @@ container.forEach(function(som){
   // mathematics.style.width = Numericaltheorem + '%'
 
   // 문자 테스트 적용함
-  const nhangulame = som.querySelector('.ber')
+  const nhangulame = som.querySelector('.kaunteudaun')
   // 빈 공간에 방금 만든 숫자을 만듬
   nhangulame.textContent = Numericaltheorem;
     
@@ -70,4 +70,4 @@ box.addEventListener('mouseleave',function(){
 })
 
 
-
+// 메뉴 슬라이드
