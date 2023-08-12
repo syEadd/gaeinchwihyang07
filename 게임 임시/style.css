@@ -59,6 +59,25 @@ box-sizing: border-box;
   top: 410px;
   left: -20px;
 }
+.kaunteudaun{
+  margin: 20px;
+  font-size: 40px;
+  
+  animation: kaunteu 5s infinite;
+}
+
+@keyframes kaunteu {
+  0%{
+    color: deepskyblue;
+  }50%{
+    color: rgb(155, 187, 12);
+    
+  }100%{
+    color: red;
+   
+  }
+  
+}
 .ho{
   margin: 10px;
   width: 420px;
@@ -105,6 +124,7 @@ box-sizing: border-box;
   height: 100px;
   background-color: skyblue;
 }
+
 .icon{
   color: rgb(68, 68, 232);
   font-weight: 700;
@@ -189,10 +209,10 @@ li{
   width: 100%;
   height: 100% ;
   text-align: center;
+  position: relative;
 }
 
 .Sidebar > li > a{
-  border: 2px solid gold;
   font-size: 20px;
   font-weight: 700;
   padding: 16px;
@@ -223,24 +243,66 @@ li{
 
 .Sidebar li ul li > a{
   font-size: 15px;
-  border: 2px solid darkgoldenrod;
-  padding: 8px;
   color: green;
+  padding: 7px;
 }
 .Sidebar li ul li > a:hover{
   color: darkblue;
+  padding: 7px;
   font-weight: 600;
   background-color: deepskyblue;
 }
 
 /* 메인 */
+
+.main-A{
+  position: relative;
+  overflow: hidden;
+  max-width: 400px;
+}
 .moniteo-seteu{
   display: flex;
-  height: 100px;
-  width: 800px;
+  height: 200px;
+
+  width: 1600px;
+ 
 }
 
 .moniteo-seteu li{
-  width: 200px
-  
+  height: 200px;
+  width: 400px
+   
+}
+
+.moniteo-seteu li a > img{
+  border: 3px solid gold;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.key{
+  position: absolute;
+  bottom: 10px;
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  background-color: rosybrown;
+  color: rgb(11, 167, 123);
+  border-radius: 20px;
+}
+
+.key-left{
+  right: 210px;
+}
+.key-left:hover{
+  background-color: blueviolet;
+  color: yellow;
+}
+.key-right{
+  left: 210px;
+}
+.key-right:hover{
+  background-color: blueviolet;
+  color: yellow;
 }
