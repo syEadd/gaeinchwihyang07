@@ -1,4 +1,4 @@
-const container = document.querySelectorAll('.ho')
+const watercourse = document.querySelectorAll('.watercourse')
 
 setTimeout(function(){
 document.querySelector('.main-up').classList.add('box-off');
@@ -8,7 +8,7 @@ document.querySelector('.main-up').classList.add('box-off');
 
 // 오프닝 화 면 
 
-container.forEach(function(som){
+watercourse.forEach(function(som){
   
   // 숫자 적용 적용하는 data-number
   const mathematics = som.querySelector('.num')
@@ -45,8 +45,28 @@ container.forEach(function(som){
 })
 
 
+//미니 물풍선
+document.querySelector('.water-bomb').addEventListener('click',function(box){
 
+  const top = document.querySelector('.water-bomb-num');
+ 
+  const lety = top.dataset.number;
+    top.style.height = lety;
 
+  const yoy = document.querySelector('.water-bomb-font');
+    yoy.textContent = lety;
+
+  
+    let inup = 0;
+
+  setInterval(function(){
+  inup++;
+  if(inup <= lety){
+    top.style.height = inup + '%'
+    yoy.textContent = inup + '%'
+  }
+  },45)
+})
 
 
 // 사이드 바
@@ -71,3 +91,22 @@ box.addEventListener('mouseleave',function(){
 
 
 // 메뉴 슬라이드
+let imgtime = document.querySelectorAll('.moniteo-seteu li');
+
+let time = 0; 
+
+document.querySelector('.key-right').addEventListener('click',function(){
+
+  if(time <imgtime.length -1){
+    time++;
+    document.querySelector('.moniteo-seteu').style.transform = 'translateX(-'+time * 400 + 'px)'
+  }
+})
+document.querySelector('.key-left').addEventListener('click',function(){
+
+  if(time > 0){
+    time--;
+    document.querySelector('.moniteo-seteu').style.transform = 'translateX(-'+ time * 400 + 'px)'
+    
+  }
+})
