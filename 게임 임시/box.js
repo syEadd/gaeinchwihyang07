@@ -4,6 +4,7 @@ setTimeout(function(){
 document.querySelector('.main-up').classList.add('box-off');
 //clearInterval(clock);
 //타이머가 밖에 있을때 setInterval
+waterbomb()
 },5000)
 
 // 오프닝 화 면 
@@ -46,19 +47,41 @@ watercourse.forEach(function(som){
 
 
 //미니 물풍선
-document.querySelector('.water-bomb').addEventListener('click',function(box){
+// document.querySelector('.water-bomb').addEventListener('click',function(box){
 
-  const top = document.querySelector('.water-bomb-num');
+//   const top = document.querySelector('.water-bomb-num');
  
-  const lety = top.dataset.number;
-    top.style.height = lety;
+//   const lety = top.dataset.number;
+//     top.style.height = lety;
 
-  const yoy = document.querySelector('.water-bomb-font');
-    yoy.textContent = lety;
+//   const yoy = document.querySelector('.water-bomb-font');
+//     yoy.textContent = lety;
 
   
-    let inup = 0;
+//     let inup = 0;
 
+//   setInterval(function(){
+//   inup++;
+//   if(inup <= lety){
+//     top.style.height = inup + '%'
+//     yoy.textContent = inup + '%'
+//   }
+//   },45)
+// })
+
+function waterbomb(){
+  
+  const top = document.querySelector('.water-bomb-num');
+  
+  const lety = top.dataset.number;
+    top.style.height = lety;
+  
+  const yoy = document.querySelector('.water-bomb-font');
+    yoy.textContent = lety;
+  
+  
+    let inup = 0;
+  
   setInterval(function(){
   inup++;
   if(inup <= lety){
@@ -66,7 +89,9 @@ document.querySelector('.water-bomb').addEventListener('click',function(box){
     yoy.textContent = inup + '%'
   }
   },45)
-})
+}
+
+
 
 
 // 사이드 바
