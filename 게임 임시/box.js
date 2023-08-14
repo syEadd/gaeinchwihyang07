@@ -4,8 +4,12 @@ setTimeout(function(){
 document.querySelector('.main-up').classList.add('box-off');
 //clearInterval(clock);
 //타이머가 밖에 있을때 setInterval
-waterbomb()
+
+// waterbomb();
+// 리모콘 임시
 },5000)
+
+
 
 // 오프닝 화 면 
 
@@ -26,7 +30,9 @@ watercourse.forEach(function(som){
     
   // 초기값 0
   let Zero = 0;
-
+  
+  waterBalloon();
+  // 큰 물풍선 함수 이름
   
   
   
@@ -45,43 +51,47 @@ watercourse.forEach(function(som){
 
 })
 
+// 큰 물풍선
+
+
+function waterBalloon(){
+  
+   const balloonNum = document.querySelector('.water-balloon-num');
+  
+   const waterBol = balloonNum.dataset.number;
+   balloonNum.style.height = waterBol;
+  
+   const waterBolFont = document.querySelector('.water-balloon-font');
+   waterBolFont.textContent = waterBol;
+  
+   let balloon = 0;
+  
+   setInterval(function(){
+     balloon++;
+  
+     if(balloon <= waterBol ){
+       balloonNum.style.height = balloon + '%'
+       waterBolFont.textContent = balloon + '%'
+     }
+  
+   },45)
+}
+
 
 //미니 물풍선
-// document.querySelector('.water-bomb').addEventListener('click',function(box){
+document.querySelector('.water-bomb').addEventListener('click',function(box){
 
-//   const top = document.querySelector('.water-bomb-num');
- 
-//   const lety = top.dataset.number;
-//     top.style.height = lety;
-
-//   const yoy = document.querySelector('.water-bomb-font');
-//     yoy.textContent = lety;
-
-  
-//     let inup = 0;
-
-//   setInterval(function(){
-//   inup++;
-//   if(inup <= lety){
-//     top.style.height = inup + '%'
-//     yoy.textContent = inup + '%'
-//   }
-//   },45)
-// })
-
-function waterbomb(){
-  
   const top = document.querySelector('.water-bomb-num');
-  
+ 
   const lety = top.dataset.number;
     top.style.height = lety;
-  
+
   const yoy = document.querySelector('.water-bomb-font');
     yoy.textContent = lety;
-  
+
   
     let inup = 0;
-  
+
   setInterval(function(){
   inup++;
   if(inup <= lety){
@@ -89,7 +99,30 @@ function waterbomb(){
     yoy.textContent = inup + '%'
   }
   },45)
-}
+})
+
+// 리모콘 ▼ ▼ ▼
+// function waterbomb(){
+  
+//   const top = document.querySelector('.water-bomb-num');
+  
+//   const lety = top.dataset.number;
+//     top.style.height = lety;
+  
+//   const yoy = document.querySelector('.water-bomb-font');
+//     yoy.textContent = lety;
+  
+  
+//     let inup = 0;
+  
+//   setInterval(function(){
+//   inup++;
+//   if(inup <= lety){
+//     top.style.height = inup + '%'
+//     yoy.textContent = inup + '%'
+//   }
+//   },45)
+// }
 
 
 
