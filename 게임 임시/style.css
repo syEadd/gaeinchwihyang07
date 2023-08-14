@@ -503,4 +503,38 @@ li{
   }
 }
 
-
+/* 아래 슬라이드 */
+.footer-A{
+  display: flex;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(93, 145, 242, 0.2);
+  background-attachment: fixed;
+}
+.footer-A section{
+  display: flex;
+  overflow: hidden;
+  max-width: 600px;
+}
+.footer-A section li {
+  width: 150px;
+  height: 200px;
+  align-items: center;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: skyblue;
+  border: 3px solid rgba(93, 145, 242, 0.2);
+}
+.footer-A section li p{
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(56, 67, 44);
+}
+.footer-A section li img{
+  margin: 0 auto;
+ width: 145px;
+ height: 150px;
+}
