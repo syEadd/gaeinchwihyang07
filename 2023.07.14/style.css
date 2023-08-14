@@ -1,0 +1,140 @@
+@font-face {
+  font-family:  Orbin;
+  /* 폰트 이름 */
+  src : url('./fonts/Orbitron-Regular.eot');
+  src : url('./fonts/Orbitron-Regular.woff') format('woff');
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  display: block;
+}
+
+body {
+  
+ /* font-family:  Orbin, sans-serif;  */
+ font-family:  Orbin, serif; 
+ /* font-family : font 명 , 기본 없으면 변경 */
+ background-image: url('./imges/bg_afternoon.jpg');
+}
+
+.wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  padding: 16px;
+}
+.nav-top{ 
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-top li{
+  padding: 10px;
+}
+
+.logo-img{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo-img a > img{
+  width: 900px;
+  height: 100%;
+  object-fit: cover;
+}
+.font-style{
+  margin-left: 100px;
+  margin-bottom: 200px;
+}
+.font-style h1{
+  padding-bottom: 10px ;
+}
+main{
+  position: relative;
+}
+
+.main{
+  border: 3px solid fuchsia;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: naver 9s ease-in-out infinite ;
+  background-image: url('./imges/cloud1.png');
+  
+}
+@keyframes naver {
+  0%{
+    transform: translate(50%,0);
+  }50%{
+    transform: translate(-50%,0);
+  }100%{
+    transform: translate(50%,0);
+    /* transform: translate(0,0); */
+    
+  }
+  
+}
+.main-B{
+  width: 90%;
+  margin: 0 auto;
+}
+.main-B ul{
+  display: flex;
+  justify-content: space-between;
+}
+.main-B button{
+  
+  z-index: 100;
+  width: 320px;
+  padding: 10px;
+  background-color:rgb(229, 213, 213, 0.5);
+}
+.main-B button:hover{
+  background-color: black;
+  color: #fff;
+}
+.main-B li{
+  margin: 50px 0;
+  
+}
+button{
+  font-weight: 600;
+  border: none;
+  background-color: transparent;
+}
+.phone-main{
+  border: 2px solid forestgreen;
+  width: 400px;
+  height: 230px;
+  overflow: hidden;
+  position: absolute;
+  top: 12%;
+  right: 25%;
+}
+
+.phone{
+  width: 100%;
+  height: 100%;
+  animation: naver 9s ease-in-out infinite ;
+  background-image: url('./imges/cloud2.png');
+}
+
