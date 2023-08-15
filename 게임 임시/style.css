@@ -9,6 +9,11 @@ ul{
 .main-up{
   position: relative;
 }
+/* 전체 화면 */
+.bubble{
+  width: 100vw;
+  overflow: hidden;
+}
 .box-on{
   z-index: 200;
   position: fixed;
@@ -351,7 +356,6 @@ li{
 /* 오프닝 큰 물풍선 */
 
 .water-balloon-M{
-  border: 2px solid gold;
   position: absolute;
   top: 350px;
   left: 45%;
@@ -506,35 +510,64 @@ li{
 /* 아래 슬라이드 */
 .footer-A{
   display: flex;
-  height: 300px;
+  height: 450px;
   justify-content: center;
   align-items: center;
   background-color: rgba(93, 145, 242, 0.2);
   background-attachment: fixed;
 }
 .footer-A section{
-  display: flex;
-  overflow: hidden;
-  max-width: 600px;
+  position: relative;
+  overflow: hidden; 
+  max-width: 810px;
+  background-color: blanchedalmond;
 }
-.footer-A section li {
-  width: 150px;
-  height: 200px;
+
+.footer-A .Operation{
+  display: flex;
+  transform: translateX(-204px);
+  /* ▼ 기본값 200px border-box 값 3px*2개 빼고 margi 10px 넣고 제작 ▼ */
+  }
+  
+ 
+  .footer-A .Operation li {
+  
+  margin-right: 10px ;
+  width: 200px;
+  height: 350px;
   align-items: center;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: skyblue;
+  background-color: transparent;
   border: 3px solid rgba(93, 145, 242, 0.2);
 }
-.footer-A section li p{
+.footer-A .Operation li:last-child{
+  margin-right: 0px ;
+}
+
+.footer-A .Operation li p{
   font-size: 20px;
   font-weight: 600;
   color: rgb(56, 67, 44);
 }
-.footer-A section li img{
+.footer-A .Operation li img{
+  border: 3px solid gray;
   margin: 0 auto;
- width: 145px;
- height: 150px;
+ width: 190px;
+ height: 200px;
+}
+.footer-Btn{
+  position: absolute;
+  top:0;
+  
+  width: 30px;
+  height: 30px;
+}
+.Btn-left{
+  right: 0;
+}
+.Btn-right{
+  left: 0;
 }
