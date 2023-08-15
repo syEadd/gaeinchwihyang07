@@ -168,3 +168,36 @@ document.querySelector('.key-left').addEventListener('click',function(){
     
   }
 })
+
+// 캐릭터 이름 소개
+
+let friendName = document.querySelectorAll('.footer-A section li');
+BtnL = document.querySelector('.Btn-left');
+BtnR = document.querySelector('.Btn-right');
+
+let small = 0;
+
+
+
+friendName.forEach(function(ee,index){
+  
+  ee.function()
+  {
+    
+    small++;
+    
+    document.querySelector('.footer-A .Operation').style.transform = 'translateX(-' +((small *200)-index*6) +'px)';
+    
+}
+
+
+})
+BtnL.addEventListener('click',function(e,index){
+  if(small < friendName.length -1){
+    
+    
+  }
+  
+  
+  
+})
