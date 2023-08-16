@@ -181,20 +181,16 @@ let small = 0;
 
 friendName.forEach(function(ee,index){
   
-  ee.function()
-  {
-    
-    small++;
-    
-    document.querySelector('.footer-A .Operation').style.transform = 'translateX(-' +((small *200)-index*6) +'px)';
-    
-}
+  small++;
+  
+  document.querySelector('.footer-A .Operation').style.transform = 'translateX(-' +((small *200)-index*6) +'px)';
+  
 
 
 })
 BtnL.addEventListener('click',function(e,index){
   if(small < friendName.length -1){
-    
+    friendName.forEach();
     
   }
   
