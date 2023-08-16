@@ -429,6 +429,7 @@ li{
   width: 200px;
   height: 200px;
   animation: carricter 5s infinite ease-in-out;
+  /* animation-direction:alternate; */
 }
 .carricter13 > img{
   width: 100%;
@@ -479,6 +480,7 @@ li{
     transform: translate(2000px,-20px);
     
     
+    
   }100%{
     transform: translate(-350px ,0);
   }
@@ -509,6 +511,7 @@ li{
 
 /* 아래 슬라이드 */
 .footer-A{
+  position: relative;
   display: flex;
   height: 450px;
   justify-content: center;
@@ -517,22 +520,22 @@ li{
   background-attachment: fixed;
 }
 .footer-A section{
-  position: relative;
   overflow: hidden; 
-  max-width: 810px;
+  max-width: 779px;
   background-color: blanchedalmond;
+  
 }
 
 .footer-A .Operation{
   display: flex;
-  transform: translateX(-204px);
+  transition: transform 300ms ease-in-out ;
+  /* transform: translateX(-204px); */
   /* ▼ 기본값 200px border-box 값 3px*2개 빼고 margi 10px 넣고 제작 ▼ */
   }
   
  
   .footer-A .Operation li {
   
-  margin-right: 10px ;
   width: 200px;
   height: 350px;
   align-items: center;
@@ -543,9 +546,7 @@ li{
   background-color: transparent;
   border: 3px solid rgba(93, 145, 242, 0.2);
 }
-.footer-A .Operation li:last-child{
-  margin-right: 0px ;
-}
+
 
 .footer-A .Operation li p{
   font-size: 20px;
@@ -560,14 +561,88 @@ li{
 }
 .footer-Btn{
   position: absolute;
-  top:0;
+  top:50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  color:rgb(0, 131, 183);
+  background-color: transparent;
+  border: none;
+
   
-  width: 30px;
-  height: 30px;
 }
 .Btn-left{
-  right: 0;
+  left: 250px;
 }
 .Btn-right{
-  left: 0;
+  right: 250px;
+}
+/* 마지막  */
+.footer-B{
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(181, 209, 220,0.5);;
+  
+}
+.footer-B p,
+.footer-B a{
+  color: gray;
+}
+.font-color-A i{
+  color: rgb(196, 196, 79);
+}
+.font-color-B i{
+  color: darkslategrey;
+}
+.footer-B div{
+  display: flex;
+  
+}
+.company{
+
+  display: flex;
+  /* justify-content: space-around; */
+}
+
+/* 고장 */
+.company p::after{
+  content: '';
+  display: inline-block;
+  width: 2px;
+  height: 50px;
+  margin-left: 20px;
+  background-color: #aaa;;
+}
+.company p{
+margin-right: 20px;
+}
+.address p{
+  padding: 1rem;
+}
+.Address-photo a>img{
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+}
+
+
+/* 시작 버튼 */
+.coordinate{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border: 10px solid rebeccapurple;
+  border-radius: 50%;
+}
+.coordinate::after{
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-top: 10px;
+  border-left: transparent;
+  border-right: 10px;
 }

@@ -2,7 +2,7 @@ const watercourse = document.querySelectorAll('.watercourse')
 
 setTimeout(function(){
 document.querySelector('.main-up').classList.add('box-off');
-//clearInterval(clock);
+// clearInterval(clock);
 //타이머가 밖에 있을때 setInterval
 
 // waterbomb();
@@ -172,28 +172,30 @@ document.querySelector('.key-left').addEventListener('click',function(){
 // 캐릭터 이름 소개
 
 let friendName = document.querySelectorAll('.footer-A section li');
-BtnL = document.querySelector('.Btn-left');
+console.log(friendName)
 BtnR = document.querySelector('.Btn-right');
+BtnL = document.querySelector('.Btn-left');
 
-let small = 0;
-
-
-
-friendName.forEach(function(ee,index){
-  
-  small++;
-  
-  document.querySelector('.footer-A .Operation').style.transform = 'translateX(-' +((small *200)-index*6) +'px)';
-  
+let small = 1;
+let Sup = 0;
 
 
-})
-BtnL.addEventListener('click',function(e,index){
+
+
+BtnR.addEventListener('click',function(){
+
   if(small < friendName.length -1){
-    friendName.forEach();
+    small++;
+     Sup++;
+    document.querySelector('.footer-A .Operation').style.transform = 'translateX(-'+ (((small * 200)-small * 6)+Sup) + 'px)'
+  }
+})
+
+BtnL.addEventListener('click',function(){
+  if(small > 0){
+    small--;
+    Sup--;
+    document.querySelector('.footer-A .Operation').style.transform = 'translateX(-'+ (((small * 200)-small * 6)+Sup) + 'px)'
     
   }
-  
-  
-  
 })
