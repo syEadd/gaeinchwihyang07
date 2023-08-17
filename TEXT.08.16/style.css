@@ -3,6 +3,14 @@
   src : url('./fonts/Orbitron-Regular.eot');
   src : url('./fonts/Orbitron-Regular.woff') format('woff');
 }
+.wr.wd{
+  width:300px;
+  height: 300px;
+  position: absolute;
+  z-index: 100;
+  background-color: darkblue;
+}
+
 
 * {
   margin: 0;
@@ -23,77 +31,58 @@ body {
  font-family: Orbitron, sans-serif; 
 }
 
-.wrapper {
+#wrapper {
   position: fixed;
   width: 100%;
   height: 100vh;
+  z-index: 1;
   background-repeat: no-repeat;
   background-position: center;
   background-size : cover;
 }
 
 /* 전체화면 배경 class */
-.wrapper.morning {
+#wrapper.morning {
   background-image: url('./imges/bg_morning.jpg');
 }
 
-.wrapper.afternoon {
+#wrapper.afternoon {
   background-image: url('./imges/bg_afternoon.jpg');
 }
 
-.wrapper.evening {
+#wrapper.evening {
   background-image: url('./imges/bg_evening.jpg');
 }
 
-.wrapper.night {
+#wrapper.night {
   background-image: url('./imges/bg_night.jpg');
 }
 
 /* 전체화면 구름 1,2 */
-/* 전체화면 구름 1,2 */
-.wrapper > img:nth-child(1) {
+#wrapper > img:nth-child(1) {
   position: absolute;
   top: 45px;
   left: 15px;
   z-index: -1;
   width: 800px;
   opacity: 0.8;
-  animation: cloud2 60s linear infinite;
+  animation-name: cloud1;
+  animation-duration: 100s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
-.wrapper > img:nth-child(2) {
+#wrapper > img:nth-child(2) {
   position: absolute;
   top: 20px;
   left: 0;
   z-index: -1;
   width: 1000px;
   opacity: 0.6;
-}
-#phone img:first-of-type {
-  border: 3px solid gainsboro;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 360px;
+  /* name | duration | timing-function | count*/
+  animation: cloud2 60s linear infinite;
 }
 
-#phone img:last-of-type {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 800px;
-}
-
-.phone-time {
-  position: absolute;
-  top: 50%;
-  left: 30px;
-  z-index: 10;
-  transform: translateY(-50%);
-  font-size: 48px;
-  font-weight: 700;
-  color: #333;
-}
 .global-header {
   display: flex;
   justify-content: space-between;
@@ -104,7 +93,7 @@ body {
 .logo {
   width: 90px;
   height: 80px;
-  background-image: url('./images/logo_b.png');
+  background-image: url('./imges/logo_b.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -173,22 +162,21 @@ body {
 }
 
 /* phone background-image 변경 */
-.wrapper.morning #phone {
+#wrapper.morning #phone {
   background-image: url('./imges/phone_morning.png');
 }
 
-.wrapper.afternoon #phone {
+#wrapper.afternoon #phone {
   background-image: url('./imges/phone_afternoon.png');
 }
 
-.wrapper.evening #phone {
+#wrapper.evening #phone {
   background-image: url('./imges/phone_evening.png');
 }
 
-.wrapper.night #phone {
+#wrapper.night #phone {
   background-image: url('./imges/phone_night.png');
 }
-
 
 #phone div {
   position: absolute;
@@ -199,6 +187,33 @@ body {
   overflow: hidden;
 }
 
+.phone-time {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  z-index: 10;
+  transform: translateY(-50%);
+  font-size: 48px;
+  font-weight: 700;
+  color: #333;
+}
+
+#phone img:first-of-type {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 360px;
+  /* name | duration | timing-fuction | count */
+  animation: cloud-p1 80s linear infinite;
+}
+
+#phone img:last-of-type {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 800px;
+  animation: cloud-p2 80s linear infinite;
+}
 
 .btn-wrapper {
   position: fixed;
@@ -240,28 +255,76 @@ body {
   background-color: #111;
 }
 
-/* .wrapper에 night class가 있을 때 화면 */
-.wrapper.night .logo {
-  background-image: url('./images/logo_w.png');
+/* #wrapper에 night class가 있을 때 화면 */
+#wrapper.night .logo {
+  background-image: url('./imges/logo_w.png');
 }
 
-.wrapper.night .gnb-list li a {
+#wrapper.night .gnb-list li a {
   color: #fff;
 }
 
-.wrapper.night .gnb-list li a::after {
+#wrapper.night .gnb-list li a::after {
   border-bottom-color: #fff;
 }
 
-.wrapper.night .lorem-txt p,
-.wrapper.night .lorem-txt em {
+#wrapper.night .lorem-txt p,
+#wrapper.night .lorem-txt em {
   color: #999;
 }
 
-.wrapper.night .lorem-txt strong {
+#wrapper.night .lorem-txt strong {
   color: #fff;
 }
 
-.wrapper.night .phone-time {
+#wrapper.night .phone-time {
   color: #fff;
+}
+
+@keyframes cloud1 {
+  0% {
+    left: -100vw;
+  } 
+  100% {
+    left: 100vw;
+  }
+}
+
+@keyframes cloud2 {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 1200px;
+  }
+  60% {
+    left: -1200px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes cloud-p1 {
+  0% {
+    left: -600px;
+  }
+  100% {
+    left: 600px;
+  }
+}
+
+@keyframes cloud-p2 {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 500px;
+  }
+  60% {
+    left: -500px;
+  }
+  100% {
+    left: 0;
+  }
 }
