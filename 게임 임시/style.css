@@ -580,8 +580,8 @@ li{
 .footer-B{
   font-size: 16px;
   display: flex;
-  flex-direction: column;
   background-color: rgb(181, 209, 220,0.5);;
+  flex-direction: column;
   
 }
 .footer-B p,
@@ -599,25 +599,29 @@ li{
   
 }
 .company{
-
+  position: relative;
   display: flex;
-  /* justify-content: space-around; */
+  justify-content: space-around;
 }
 
 /* 고장 */
-.company p::after{
+.company li::before{
+  position: absolute;
   content: '';
+  background-color: #CCC;
   display: inline-block;
   width: 2px;
-  height: 50px;
-  margin-left: 20px;
-  background-color: #aaa;;
+  height: 20px;
+  top: 10px;
+ 
+  
+  
 }
 .company p{
 margin-right: 20px;
 }
 .address p{
-  padding: 1rem;
+  padding: 10px;
 }
 .Address-photo a>img{
   width: 80px;
