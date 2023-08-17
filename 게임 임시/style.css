@@ -604,18 +604,22 @@ li{
   justify-content: space-around;
 }
 
-/* 고장 */
+/* 수리 */
+/* a태크 안에 :before 적용 되면 전부 다 적용 됨 주의 */
 .company li::before{
-  position: absolute;
   content: '';
-  background-color: #CCC;
   display: inline-block;
-  width: 2px;
+  width: 1px;
   height: 20px;
-  top: 10px;
- 
-  
-  
+  text-align: center;
+  background-color: #666;
+margin-right: 50px;
+}
+.company li:first-child:before{
+  content: none;
+}
+.company li{
+  padding: 1rem;
 }
 .company p{
 margin-right: 20px;
@@ -638,15 +642,7 @@ margin-right: 20px;
   border: 10px solid rebeccapurple;
   border-radius: 50%;
 }
-.coordinate::after{
-  position: absolute;
-  content: '';
-  top: 0;
-  right: 0;
-  display: block;
-  width: 20px;
-  height: 20px;
-  border-top: 10px;
-  border-left: transparent;
-  border-right: 10px;
+
+.coordinate li:first-child:after{
+  content: none;
 }
