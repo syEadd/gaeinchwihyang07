@@ -428,7 +428,7 @@ li{
   left: 10;
   width: 200px;
   height: 200px;
-  animation: carricter 5s infinite ease-in-out;
+  animation: carricter 5s normal infinite ease-in-out;
   /* animation-direction:alternate; */
 }
 .carricter13 > img{
@@ -442,7 +442,7 @@ li{
   left: 250px;
   width: 80px;
   height: 80px;
-  animation: Waterball 5s infinite ease-in-out;
+  animation: Waterball 5s normal infinite ease-in-out;
 }
 .Waterball > img{
   width: 100%;
@@ -482,7 +482,7 @@ li{
     
     
   }100%{
-    transform: translate(-350px ,0);
+    transform: translate(2100px ,70px);
   }
 }
 
@@ -505,7 +505,7 @@ li{
     
     
   }100%{
-    transform: translate(-350px ,0);
+    transform: translate(2200px ,60px);
   }
 }
 
@@ -645,4 +645,36 @@ margin-right: 20px;
 
 .coordinate li:first-child:after{
   content: none;
+}
+.Contact-Sharing p{
+  background-color: #666;
+  
+  font-size: 30px;
+  
+}
+
+
+
+
+.Contact-Sharing p:nth-child(1):hover{
+  color: blue;
+  transform: scale(1.5);
+}
+.Contact-Sharing p:nth-child(2):hover{
+  color: aqua;
+  transform: scale(1.5);
+}
+.Contact-Sharing p:nth-child(3):hover{
+  color: darkblue;
+  transform: scale(1.5);
+}
+.Contact-Sharing p:nth-child(4):hover{
+  color: red;
+  transform: scale(1.5);
+}
+.information{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
 }
