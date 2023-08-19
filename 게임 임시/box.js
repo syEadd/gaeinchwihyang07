@@ -199,3 +199,15 @@ BtnL.addEventListener('click',function(){
     
   }
 })
+
+
+
+//게임시작 버튼
+
+document.querySelector('.coordinate').addEventListener('click',function(){
+  document.querySelector('.pass').classList.add('on-up');
+})
+document.querySelector('.pass button').addEventListener('click',function(){
+  document.querySelector('.pass').classList.remove('on-up');
+  
+})

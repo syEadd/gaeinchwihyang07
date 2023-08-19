@@ -126,6 +126,18 @@ ul{
 }
 
 /* 모바일 메뉴 */
+.Sidebar-S nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 400px;
+  height: 500px;
+  background-color: #fff;
+  border:3px solid #000 ;
+}
+
+/* 위에 메뉴 */
 
 .icon-main{
   display: flex;
@@ -521,7 +533,7 @@ li{
 }
 .footer-A section{
   overflow: hidden; 
-  max-width: 779px;
+  max-width: 785px;
   background-color: blanchedalmond;
   
 }
@@ -580,7 +592,8 @@ li{
 .footer-B{
   font-size: 16px;
   display: flex;
-  background-color: rgb(181, 209, 220,0.5);;
+  border-top: 3px solid darkblue;
+  background-color: rgba(93, 145, 242, 0.2);
   flex-direction: column;
   
 }
@@ -627,54 +640,281 @@ margin-right: 20px;
 .address p{
   padding: 10px;
 }
+.address p:hover,
+.company li:hover,
+.font-color-B p:hover,
+.address p a:hover{
+  font-family: 700;
+  color: blue;
+}
+.address p:hover,
+.font-color-B p:hover,
+.address p a:hover{
+  transform: scale(1.1);
+  transition: transform 300ms ease-in-out;
+  
+}
 .Address-photo a>img{
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   padding: 10px;
+  display: flex;
 }
 
 
 /* 시작 버튼 */
-.coordinate{
+.Start-screen{
   position: relative;
+  width: 100vw;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url('./img/메인\ 화면3.jpg');
+}
+.Little-Friend-1{
+  position: absolute;
+  z-index: 9;
+  filter: blur(1.5rem);
+  width: 350px;
+  height: 320px;
+  top: 150px;
+  left: 50%;
+  animation: Returning-Friends normal infinite 2s ease-in-out;
+}
+.Little-Friend-1 img{
+  width: 100%;
+  height: 100%;
+}
+.Little-Friend-2{
+  animation: Returning-Friends normal infinite 2s ease-in-out;
+  position: absolute;
+  z-index: 10;
   width: 300px;
   height: 300px;
-  border: 10px solid rebeccapurple;
-  border-radius: 50%;
+  position: absolute;
+  top:160px;
+  left: 52%;
+}
+.Little-Friend-2 img{
+  width: 100%;
+  height: 100%;
+}
+.Little-Friend-3{
+  animation: Returning-Friends-2 infinite 2s ease-in-out;
+  position: absolute;
+  z-index: 9;
+  filter: blur(1.5rem);
+  width: 370px;
+  height: 370px;
+  top: 80px;
+  left: 22%;
+}
+.Little-Friend-3 img{
+  width: 100%;
+  height: 100%;
 }
 
-.coordinate li:first-child:after{
-  content: none;
+.Little-Friend-4{
+  animation: Returning-Friends-2 infinite 2s ease-in-out;
+  position: absolute;
+  z-index: 10;
+  width: 320px;
+  height: 320px;
+  top: 110px;
+  left: 24%;
+}
+.Little-Friend-4 img{
+  width: 100%;
+  height: 100%;
+}
+
+
+.coordinate{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 10px solid skyblue;
+  border-radius: 50%;
+  display: flex;
+  top: 60%;
+  left: 50%;
+ transform: translateX(-60%);
+}
+.pass.on-up{
+  display: block;
+}
+.pass{
+  display: none;
+  width: 1000px;
+  height: 300px;
+  border-radius: 20px;
+  background-color: #fff;
+  border: 4px solid #000;
+ position: absolute;
+ z-index: 11;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%,-50%);
+}
+.pass button{
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  font-size: 35px;
+  padding: 18px;
+  color: red;
+}
+.pass button:hover{
+  color: blue;
+  transition:color 300ms ease-in-out ;
+}
+.pass h1{
+  text-align: center;
+  padding-top: 50px;
+}
+.pass p{
+  text-align: center;
+  padding-top: 20px;
+
+}
+
+@keyframes Returning-Friends {
+  0%{
+    transform: translate(50px,0);
+  }50%{
+    transform: translate(70px,-20px)rotate(-20deg);
+    
+  }100%{
+    transform: translate(90px,50px);
+    
+  }
+}
+@keyframes Returning-Friends-2 {
+  0%{
+    transform: translate(-50px,0);
+    
+  }50%{
+    
+    transform: translate(-70px,20px)rotate(10deg);
+  }100%{
+    transform: translate(-90px,-50px);
+    
+  }
+}
+
+
+.coordinate::after{
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 10px;
+  border-top: 30px solid blue;
+  border-bottom: 30px solid transparent ;
+  border-right: 30px solid transparent;
+  border-left:30px solid transparent;
+  left: 50%;
+  top: -20px;
+  transform: translateX(-50%);
+}
+.coordinate::before{
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 10px;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid blue ;
+  border-right: 30px solid transparent;
+  border-left:30px solid transparent;
+  left: 50%;
+  bottom: -20px;
+  transform: translateX(-50%);
+
+}
+.coordinate p:first-child{
+  content: '';
+  position: absolute;
+  border-radius: 10px;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent ;
+  border-right: 30px solid blue;
+  border-left:30px solid transparent;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.coordinate p:last-child{
+  content: '';
+  position: absolute;
+  border-radius: 10px;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent ;
+  border-right: 30px solid transparent;
+  border-left:30px solid blue;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.Start-game{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-weight: 700;
+  font-size: 40px;
+  color: #fff;
+}
+.Start-game:hover{
+  color: blue;
 }
 .Contact-Sharing p{
   background-color: #666;
-  
+  width: 50px;
+  height: 50px;
   font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+.Contact-Sharing p:last-child{
+  margin-right: 0px;
   
 }
 
-
-
+/* footer 마지막 마무리 */
 
 .Contact-Sharing p:nth-child(1):hover{
   color: blue;
-  transform: scale(1.5);
+  background-color:skyblue;
+  transform: scale(1.2);
+  transition: transform 300ms ease-in-out;
 }
 .Contact-Sharing p:nth-child(2):hover{
-  color: aqua;
-  transform: scale(1.5);
+  color: darkmagenta;
+  background-color: chartreuse;
+  transform: scale(1.2);
+  transition: transform 300ms ease-in-out;
 }
 .Contact-Sharing p:nth-child(3):hover{
   color: darkblue;
-  transform: scale(1.5);
+  transform: scale(1.2);
+  background-color: aliceblue;
+  transition: transform 300ms ease-in-out;
 }
 .Contact-Sharing p:nth-child(4):hover{
   color: red;
-  transform: scale(1.5);
+  background-color: darkorange;
+  transform: scale(1.2);
+  transition: transform 300ms ease-in-out;
 }
 .information{
   display: flex;
   justify-content: space-between;
   width: 90%;
-  margin: 0 auto;
 }
+
+
