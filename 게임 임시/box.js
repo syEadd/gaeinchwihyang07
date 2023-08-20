@@ -7,7 +7,7 @@ document.querySelector('.main-up').classList.add('box-off');
 
 // waterbomb();
 // 리모콘 임시
-},5000)
+},7000)
 
 
 
@@ -211,3 +211,32 @@ document.querySelector('.pass button').addEventListener('click',function(){
   document.querySelector('.pass').classList.remove('on-up');
   
 })
+
+
+//미니 게임 물게임
+
+document.querySelectorAll('.Water-balloons-S').forEach(function(all){
+  all.addEventListener('click',function(){
+
+    const balloons = all.querySelector('.Water-balloons-num');
+    
+    const WaterB =balloons.dataset.number;
+    balloons.style.height = WaterB;
+    
+const balloonsFont = all.querySelector('.Water-balloons-font');
+balloonsFont.textContent = WaterB;
+
+let timeB = 0;
+
+let aa = setInterval(function(){
+  timeB++;
+  if(timeB <= WaterB){
+    balloons.style.height = timeB + '%'
+    balloonsFont.textContent = timeB + '%'
+  }
+  
+},50)
+})
+})
+
+
