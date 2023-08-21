@@ -169,7 +169,7 @@ document.querySelector('.key-left').addEventListener('click',function(){
   }
 })
 
-// 캐릭터 이름 소개
+// 캐릭터 이름 소개 일딴 손봄
 
 let friendName = document.querySelectorAll('.footer-A section li');
 console.log(friendName)
