@@ -23,7 +23,7 @@ box('naver.com','나의 값',1)
     let outB = new Date();
     
     outB.setDate(outB.getDate()-1);
-    // 쿠티 전날에 설정으로 삭제키
+    // 쿠키 전날에 설정으로 삭제키
     
     let notA ='';
     
