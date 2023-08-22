@@ -4,10 +4,11 @@ setTimeout(function(){
 document.querySelector('.main-up').classList.add('box-off');
 // clearInterval(clock);
 //타이머가 밖에 있을때 setInterval
-
-// waterbomb();
+waterbomb();
 // 리모콘 임시
 },7000)
+
+
 
 
 
@@ -102,14 +103,14 @@ document.querySelector('.water-bomb').addEventListener('click',function(box){
 })
 
 // 리모콘 ▼ ▼ ▼
-// function waterbomb(){
-  
-//   const top = document.querySelector('.water-bomb-num');
+// const waterbomb = document.querySelectorAll('.water-bomb-s');
+// waterbomb.forEach(function(box){
+//   const top = box.querySelector('.water-bomb-num');
   
 //   const lety = top.dataset.number;
 //     top.style.height = lety;
   
-//   const yoy = document.querySelector('.water-bomb-font');
+//   const yoy = box.querySelector('.water-bomb-font');
 //     yoy.textContent = lety;
   
   
@@ -122,7 +123,28 @@ document.querySelector('.water-bomb').addEventListener('click',function(box){
 //     yoy.textContent = inup + '%'
 //   }
 //   },45)
-// }
+// })
+
+function waterbomb(){
+  
+  const top = document.querySelector('.water-bomb-num');
+  
+  const lety = top.dataset.number;
+    top.style.height = lety;
+  
+
+  
+  
+    let inup = 0;
+  
+  setInterval(function(){
+  inup++;
+  if(inup <= lety){
+    top.style.height = inup + '%'
+   
+  }
+  },45)
+}
 
 
 

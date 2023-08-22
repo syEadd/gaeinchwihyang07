@@ -9,6 +9,15 @@ ul{
 .main-up{
   position: relative;
 }
+/* 화면 동영상 */
+.bidio{
+  width: 100%;
+  height: 1200px;
+  
+}
+.bidio video{
+  object-fit: cover;
+}
 /* 전체 화면 */
 .bubble{
   width: 100vw;
@@ -350,23 +359,44 @@ li{
 
 /* 미니 물풍선 */
 .water-bomb{
-  width: 200px;
-  height: 200px;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
   overflow: hidden;
-  background-color: rgb(11, 167, 123,0.2);
+  background-color: rgb(11, 167, 123);
   position: relative;
+}
+.water-bomb-font{
+  text-align: center;
+  
+  content: '';
+   width: 90px;
+   height: 20px;
+   border-radius: 20px;
+   background-color: rgb(11, 167, 123);
+    margin-top: 20px;
+    margin: 0 auto;
+
 }
 .water-bomb-box{
   width: 100%;
   height: 100%;
-
+  
+}
+.main-C{
+  display: flex;
+  width: 100%;
+  height: 600px;
+  justify-content: center;
+  background-image: url('./img/이미지....jpeg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .water-bomb-s{
-  border: 2px solid forestgreen;
-  width: 300px;
-  height: 300px;
+  width: 600px;
+  height: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -376,7 +406,7 @@ li{
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 10%;
+  height: 0%;
   background-color:skyblue;
   
 }
@@ -418,6 +448,7 @@ li{
   border-radius: 50%;
   overflow: hidden;
 }
+
 .water-balloon-tap{
   width: 60px;
   height: 15px;
