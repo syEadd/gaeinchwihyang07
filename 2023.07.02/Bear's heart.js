@@ -5,9 +5,11 @@ function box(이름,value,my){
   //  yes의 setDate현제시간의 기준으로 (yes.getDate()일 지정 + 매개변수)
   
   let tobox = '';
+
+
   
-  tobox += 이름+ '=' +value+ ';';
-  tobox += 'expires='+yes.toUTCString();
+  tobox = tobox +이름+ '=' +value+ ';';
+  tobox = tobox + 'expires=' + yes.toUTCString();
   // .toUTCString() 쿠기언어 만든걸 쿠기 제작
   document.cookie = tobox 
 }
