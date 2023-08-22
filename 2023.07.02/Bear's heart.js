@@ -40,6 +40,7 @@ box('naver.com','나의 값',1)
   
   document.querySelector('button').addEventListener('click',function(){
     box44('naver.com')
+    document.querySelector('.box0').classList.add('on')
     // 쿠키 이름 제거로 삭제
   })
 
