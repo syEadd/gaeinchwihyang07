@@ -4,14 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>이용 약관</title>
+    <script src="https://kit.fontawesome.com/a19afa0290.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <header>
-        
-    </header>
-<section class="section-A">
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+        /* 기존 틀 */
+    .balloon-user{
+        background-image: url('./img/이용약관.jpeg');
+        width: 100vw;
+        height: 100vh;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+    }
+   header{
+    width: 100%;
+    height: 200px;
+    border: 2px solid forestgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   .section-A{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+   }
+   .terms-M{
+    width: 600px;
+    height: 600px;
+    background-color: aliceblue;
+    border-radius: 30px;
+    overflow: hidden;
+   }
+   .terms-font{
+    border: 2px solid gainsboro;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+   }
+   .p-A{
+       width: 40px;
+       height: 40px;
+       color: #666;
+       /* border:  2px solid firebrick; */
+       position: relative;
+       
+    }
+    .p-A.on{
+        color: green;
+    }
+    .p-A:hover{
+        color: red;
+    }
 
-</section>
-    
-</body>
-</html>
+    .p-A i{
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+   }
+   .terms-S{
+    width: 100%;
+    hyphens: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.terms-S label{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 75%;
+    height: 60px;
+    border: 2px solid firebrick;
+   }
+   .terms-S label:hover{
+    background-color: rgb(146, 198, 218,0.5);
+   }
+   .flont-user{
+    display: flex;
+    width: 65%;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid gray;
+   }
+</style>
+<body>
+    <!-- water balloon user = 이용자
+    game user = 게임 이용자 
+    terms =약관 -->
+    <div class="balloon-user">
+
+        <header>
+            <div class="Title-of-use">
+                <a href="./index.html">
+                    <img src="./img/로고.png" alt="">
+                </a>
+            </div>
+        </header>
+        <section class="section-A">
+            <div class="terms-M">
+                <!-- action 다음폐이지 설정 -->
+                <form id="terms" action="">
+
+                    <h1 class="terms-font">다음 내용에 동의해주세요</h1>
+
+                    <div class="terms-S">
+                        <label for="">
+                            <input type="checkbox">
+                            <p class="p-A"><i class="fa-solid fa-battery-full"></i></p>
+                            <!-- <p class="p-B"><i> class="fa-solid fa-battery-full"></i></p> -->
+
+                            <div class="flont-user">
+                                <h2>모두동의</h2>
+                                <p>필수 및 선택 황목 동의 포함</p>
+                            </div>
+                        </label>
+                    </div>
+
+
+
+                    <div class="terms-S">
+                        <label for="">
+                            <input type="checkbox">
+                            <p class="p-A"><i class="fa-solid fa-battery-full"></i></p>
+                            <div class="">
+                                <h3>게임 및 서비스의 유용한 소식 받기</h3>
+                                <h6>업데이트,사전등록,이벤트 참가 등 도움되는 정보 입니다 </h6>
+                                <p></p>
+                            </div>
+                        </label>
+                    </div>
+
+
+
+                </form>
+
+            </div>
+        </section>
+        
+    </div>
+    <script>
+        // 에러
+        let label =document.querySelectorAll('label');
+        console.log(label)
+        label.forEach(function(box){
+            box.addEventListener('click',function(e){
+                this.querySelector('.p-A').classList.add('.on')
+            })
+        })
+    </script>
+    </body>
+    </html>
