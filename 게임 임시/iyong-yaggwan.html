@@ -154,12 +154,23 @@
         
     </div>
     <script>
+
+        
         // 에러
-        let label =document.querySelectorAll('label');
+        let label = document.querySelectorAll('label');
         console.log(label)
         label.forEach(function(box){
             box.addEventListener('click',function(e){
-                this.querySelector('.p-A').classList.add('.on')
+                e.preventDefault();
+                this.querySelector('.p-A').classList.toggle('.on')
+
+                let inputCheck = this.querySelector('input[type="checkbox"]')
+
+                // if(this.querySelector('.p-A').classList.contains('checked')) {
+                // inputCheck.checked = true;
+                //   } else {
+                // inputCheck.checked = false;
+                //   }
             })
         })
     </script>
