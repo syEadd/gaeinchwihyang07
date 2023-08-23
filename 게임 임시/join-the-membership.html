@@ -12,15 +12,16 @@
         padding: 0;
         box-sizing: border-box;
     }
+  
         /* 기존 틀 */
     .balloon-user{
-        background-image: url('./img/이용약관.jpeg');
+        background-image: url('./img/이용약관.jpeg'); 
         width: 100vw;
-        height: 100vh;
-        background-position: center center;
-        background-repeat: no-repeat;
+        height: 100%;
+        background-position: center center;  
+        background-repeat: no-repeat; 
         background-size: cover;
-        overflow: hidden;
+        overflow: hidden; 
     }
    header{
     width: 100%;
@@ -37,7 +38,7 @@
    .terms-M{
     position: relative;
     width: 600px;
-    height: 600px;
+    height: 1200px;
     background-color: aliceblue;
     border-radius: 30px;
     overflow: hidden;
@@ -54,29 +55,136 @@
     align-items: center;
     width: 100%;
     border: 2px solid firebrick;
+    margin-top: 30px;
    }
    .terms-S label{
     align-items: center;
     display: flex;
+    
    }
    .p-A{
     color: #666;
     padding: 16px;
     font-size: 30px;
    }
+   
+   .p-A.on{
+    color: blue;
+   }
    .flont-user input{
+    padding: 10px;
     width: 200px;
     height: 40px;
     font-size: 16px;
     border: none;
+    outline: none;
    }
    .font-size-up{
     background-color: #fff;
-    padding: 8px;
+    padding: 5px;
     border-radius: 10px;
     border: 2px solid gold;
    }
-
+   .com{
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+   }
+   .font-com{
+        display: flex;
+        align-items: center;
+       background-color: #fff;
+        padding: 5px;
+        border-radius: 10px;
+        border: 2px solid darkorange;
+   }
+   .font-com select{
+    padding: 10px;
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+   }
+   h2{
+    margin-bottom: 5px;
+   }
+   .button-open{
+    background-color: transparent;
+    border: none;
+   }
+   .button-on{
+    display: flex;
+    /* border: 2px solid firebrick; */
+    width: 500px;
+    justify-content: space-between;
+}
+.button-on button{
+    color: green;
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
+    font-size: 16px;
+    border: 2px solid firebrick;
+    font-size: 20px;
+}
+.button-on button.on{
+    
+    color:darkorange;
+}
+.button-open-1,
+.button-open-2,
+.button-open-3{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    height: 50px;
+    align-items: center;
+}
+.button-name{
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: skyblue;
+    
+}
+.button-name.yes{
+    background-color: yellowgreen;
+}
+.button-name:hover{
+    background-color: yellowgreen;
+}
+label input[type='radio'] {
+    /* visibility: hidden; */
+  display: none;
+}
+.question-A{
+    color: blue;
+    display: none;
+    padding:10px ;
+}
+.question-A.go{
+    display: block;
+}
+.question-B{
+    color: red;
+    display: none;
+    padding:10px ;
+}
+.question-B.on{
+    display: block;
+}
+.question-C{
+    color: green;
+    display: none;
+    padding:10px ;
+}
+.question-C.on{
+    display: block;
+}
 </style>
 <body>
     <div class="balloon-user">
@@ -108,11 +216,11 @@
                                     <div class="flont-user">
                                         <h2>아이디</h2>
                                         <div class="font-size-up"><input type="text" placeholder="아이디 입력하시요"></div>
-                                        <p class="">다시 한번 확인 부탁드립니다 회원님</p>
-                                        
                                     </div>
                                 </label>
                             </div>
+                            <p class="question-B">다시 한번 확인 부탁드립니다 회원님</p>
+                            
 
 
                             <div class="terms-S">
@@ -121,15 +229,132 @@
                                     
                                     <div class="flont-user">
                                         <h2>비밀번호</h2>
-                                        <input type="password" placeholder="비밀번호 입력하시요">
-                                        <p class="">다시 한번 확인 부탁드립니다 회원님</p>
-                                        <p class=""></p>
+                                        <div class="font-size-up">
+                                            <input type="password" placeholder="비밀번호 입력하시요">
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <p class="question-B">다시 한번 확인 부탁드립니다 회원님</p>
+                            <p class=""></p>
+                        
+                            
+
+
+                            <div class="terms-S">
+                                <label for="">
+                                    <p class="p-A"><i class="fa-solid fa-battery-full"></i></p>
+                                    
+                                    <div class="flont-user">
+                                        <h2>비밀번호재확인</h2>
+                                        <div class="font-size-up">
+                                            <input type="password" placeholder="비밀번호 입력하시요">
+                                        </div>
                                         
                                     </div>
                                 </label>
                             </div>
-                    
+                            <p class="question-B">다시 한번 확인 부탁드립니다 회원님</p>
+                            <p class=""></p>
+                            
+
+
+
+                            <div class="terms-S">
+                                <label for="">
+                                    <p class="p-A"><i class="fa-solid fa-battery-full"></i></p>
+                                    
+                                    <div class="flont-user">
+                                        <h2>이메일</h2>
+                                        <div class="com">
+                                            <div class="font-size-up">
+                                                <input type="text" placeholder="이메일 입력하시요">
+                                            </div>
+                                            
+                                            <div class="font-com">
+                                                <select name="" id="">
+                                                    <option>@naver.com</option>
+                                                    <option>@yahoo.co.kr</option>
+                                                    <option>@hanmir.com</option>
+                                                    <option>@daum.net</option>
+                                                    <option>@google.com</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                </label>
+                            </div>
+                            <p class="question-B">다시 한번 확인 부탁드립니다 회원님</p>
+                            <p class=""></p>
+                            
+                            
+                            <div class="terms-S">
+                                <label for="">
+                                    <p class="p-A"><i class="fa-solid fa-battery-full"></i></p>
+                                    <div class="button-go">
+                                        <h2>성별</h2>
+                                        <div class="button-on">
+                                            
+                                            <div class="button-open-1">
+                                                <div class="button-name">
+
+                                                    <input type="radio" value="2">
+                                                    <button type="button">여자</button>
+                                                </div>
+                                             </div>
+                                            <div class="button-open-2">
+                                                <div class="button-name">
+
+                                                    <input type="radio" value="1">
+                                                    <button type="button">남자</button>
+                                                </div>
+                                            </div>
+                                            <div class="button-open-3">
+                                                <div class="button-name">
+
+                                                    <input type="radio" value="0">
+                                                    <button type="button">선택 않함</button>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                </label>
+                            </div>
+                            <p class="question-A">Button 선택 해주세요.</p>
+                            
+
+                            <div class="terms-S">
+                                <label for="">
+                                    <p class="p-A"><i class="fa-solid fa-battery-full"></i></p>
+                                    
+                                    
+                                    <div class="flont-user">
+                                        <h2>생년월일</h2>
+                                        <div class="font-size-up"><input type="text" placeholder="아이디 입력하시요"></div>
+                                    </div>
+                                </label>
+                            </div>
+                            <p class="question-B">생년월일 4자 년도 입력 하시오.</p>
+                            
                          
+                            
+
+                            <div class="terms-S">
+                                <label for="">
+                                    <p class="p-A"><i class="fa-solid fa-battery-full"></i></p>
+                                    
+                                    
+                                    <div class="flont-user">
+                                        <h2>주소</h2>
+                                        <div class="font-size-up"><input type="text" placeholder="아이디 입력하시요"></div>
+                                    </div>
+                                </label>
+                            </div>
+                            <p class="question-B">다시 한번 확인 부탁드립니다 회원님</p>
                             
                         </form>
                         
@@ -137,5 +362,33 @@
                         
                     </section>
                 </div>  
+
+                <script>
+                    let label = document.querySelectorAll('.button-on div');
+                console.log(label)
+                label.forEach(function(box){
+                    box.addEventListener('click',function(e){
+                        e.preventDefault();
+                        this.querySelector('.button-name').classList.toggle('yes')
+                        this.querySelector('.button-on button').classList.toggle('on')
+                        
+                        let inputCheck = this.querySelector('input[type="radio"]')
+
+
+                        
+                        if(this.querySelector('.button-name').classList.contains('yes')) {
+                            inputCheck.checked = true;
+                            document.querySelectorAll('.p-A')[4].classList.remove('on')
+                            document.querySelector('.question-A').classList.remove('go')
+                      } else {
+                        inputCheck.checked = false;
+                        document.querySelectorAll('.p-A')[4].classList.add('on')
+                        document.querySelector('.question-A').classList.add('go')
+                      }
+            })
+
+        })
+       
+                </script>
 </body>
 </html>
