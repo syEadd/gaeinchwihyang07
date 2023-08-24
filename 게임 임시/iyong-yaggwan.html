@@ -256,6 +256,9 @@ background-color: green;
     align-items: center;
     border-radius: 10px;
 }
+.next.on{
+    color: aqua;
+}
 .next-up input[type='checkbox']{
     display: none;
 }
@@ -1194,15 +1197,33 @@ background-color: green;
             
               })
 
-   
-              const text = document.querySelectorAll('.num-0');
-            //   toggle 설정해서 label 설정 금지 add 설정은 않됨!!
-              const boxup = document.querySelector('.num-1 label');
-              console.log(text)
-              console.log(boxup)
+              const next = document.querySelector('.next-up');
+              next.addEventListener('click',function(up){
+                up.preventDefault();
+                this.classList.toggle('on');
+                document.querySelector('.next').classList.toggle('on')
 
-              text.forEach(function(all){
-                boxup.addEventListener('click', function(){
+                let Check = this.querySelector('input[type="checkbox"]')
+
+                if(this.querySelector('.next').classList.contains('on')){
+                    Check.checked = true;
+                    
+                }else{
+                    Check.checked = false;
+                }
+              })
+              console.log(next)
+
+
+
+   
+              const setSelection = document.querySelectorAll('.num-0');
+            //   toggle 설정해서 label 설정 금지 add 설정은 않됨!!
+              const allSettings = document.querySelector('.num-1 label');
+          
+
+              setSelection.forEach(function(all){
+                allSettings.addEventListener('click', function(){
                     if(this.querySelector('.p-A').classList.contains('up')){
 
                         all.querySelector('input[type="checkbox"]').checked = true;
@@ -1214,6 +1235,10 @@ background-color: green;
                     }
                 })
               })
+
+              
+
+
 
 
 
