@@ -59,7 +59,7 @@
        position: relative;
        
     }
-    .p-A.on{
+    label .p-A.up{
         color: green;
     }
     .p-A:hover{
@@ -275,7 +275,14 @@ background-color: green;
 .next-up button.on{
     color: antiquewhite;
 }
-
+.num-1{
+    width: 100%;
+    height: 100%;
+}
+.num-0{
+    width: 100%;
+    height: 100%;
+}
 </style>
 <body>
     <!-- water balloon user = 이용자
@@ -1031,75 +1038,84 @@ background-color: green;
                         <h1 class="terms-font">다음 내용에 동의해주세요</h1>
                         <div class="water-balloon-user">
                             
+                        <div class="num-1">
                             <div class="terms-S">
                                 <label for="">
-                                    <input type="checkbox">
-                                    <button type="button" class="p-A"><i class="fa-solid fa-battery-full"></i></button>
-                                    
-                                    
-                                    <div class="flont-user">
-                                        <h2>모두동의</h2>
-                                        <p>필수 및 선택 황목 동의 포함</p>
-                                    </div>
-                                </label>
-                            </div>
-                            
-                            
-                            <div class="terms-S">
-                                <label for="">
-                                    <input type="checkbox">
-                                    <button type="button" class="p-A"><i class="fa-solid fa-battery-full"></i></button>
-                                    <div class="font-up">
-                                        <div class="fount-box">
-                                            <h3>넥슨 통합 서비스 이용약관 동의(필수)</h3>
+                                        <input type="checkbox">
+                                        <button type="button" class="p-A"><i class="fa-solid fa-battery-full"></i></button>
+                                        
+                                        
+                                        <div class="flont-user">
+                                            <h2>모두동의</h2>
+                                            <p>필수 및 선택 황목 동의 포함</p>
                                         </div>
-                                        <button type="button" class="font-right">
-                                            <i class="fa-solid fa-magnifying-glass-arrow-right"></i>
-                                        </button>
-                                    </div>
-                                </label>
+                                    </label>
+                                </div>
+                                
                             </div>
                             
-                            
+                            <div class="num-0">
                             <div class="terms-S">
                                 <label for="">
                                     <input type="checkbox">
-                                    <button type="button" class="p-A"><i class="fa-solid fa-battery-full"></i></button>
-                                    <div class="font-up">
-                                        <div class="fount-box">
-                                            <h3>개인정보 수집 및 이용 동의(필수)</h3>
+                                        <button type="button" class="p-A"><i class="fa-solid fa-battery-full"></i></button>
+                                        <div class="font-up">
+                                            <div class="fount-box">
+                                                <h3>넥슨 통합 서비스 이용약관 동의(필수)</h3>
+                                            </div>
+                                            <button type="button" class="font-right">
+                                                <i class="fa-solid fa-magnifying-glass-arrow-right"></i>
+                                            </button>
                                         </div>
-                                        <button type="button" class="font-right">
-                                            <i class="fa-solid fa-magnifying-glass-arrow-right"></i>
-                                        </button>
-                                    </div>
-                                </label>
+                                    </label>
+                                </div>
                             </div>
+                                
                             
-                            
-                            
-                            
+                            <div class="num-0">
                             <div class="terms-S">
                                 <label for="">
                                     <input type="checkbox">
-                                    <button type="button" class="p-A"><i class="fa-solid fa-battery-full"></i></button>
-                                    <div class="font-up">
-                                        <div class="fount-box">
-                                            <h3>개인정보 유효기간 5년으로 설정</h3>
-                                            <p class="font-blue">선택하지 않아도시면 1년으로 설정됩니다</p>
+                                        <button type="button" class="p-A"><i class="fa-solid fa-battery-full"></i></button>
+                                        
+                                        <div class="font-up">
+                                            <div class="fount-box">
+                                                <h3>개인정보 수집 및 이용 동의(필수)</h3>
+                                            </div>
+                                            <button type="button" class="font-right">
+                                                <i class="fa-solid fa-magnifying-glass-arrow-right"></i>
+                                            </button>
                                         </div>
-                                        <button type="button" class="font-right">
-                                            <i class="fa-solid fa-magnifying-glass-arrow-right"></i>
-                                        </button>
-                                    </div>
-                                </label>
+                                    </label>
+                                </div>
                             </div>
+                                
+                                
                             
-
+                            
+                            <div class="num-0">
                             <div class="terms-S">
+                                <label for="">
+                                    <input type="checkbox">
+                                        <button type="button" class="p-A"><i class="fa-solid fa-battery-full"></i></button>
+                                        <div class="font-up">
+                                            <div class="fount-box">
+                                                <h3>개인정보 유효기간 5년으로 설정</h3>
+                                                <p class="font-blue">선택하지 않아도시면 1년으로 설정됩니다</p>
+                                            </div>
+                                            <button type="button" class="font-right">
+                                                <i class="fa-solid fa-magnifying-glass-arrow-right"></i>
+                                            </button>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                                
+                                
+                                <div class="terms-S">
                                     <div class="next-up">
-
-                                        <button    type="button" class="next">다음
+                                        
+                                        <button type="button" class="next">다음
                                             <input type="checkbox">
 
                                         </button>
@@ -1160,16 +1176,16 @@ background-color: green;
                 
                 
                 let label = document.querySelectorAll('label');
-                console.log(label)
+               
                 label.forEach(function(box){
                     box.addEventListener('click',function(e){
                         e.preventDefault();
-                        this.querySelector('.p-A').classList.toggle('on')
+                        
+                        this.querySelector('.p-A').classList.toggle('up')
                         
                         let inputCheck = this.querySelector('input[type="checkbox"]')
                         
-                        let pA = document.querySelectorAll('.on').length
-                        if(this.querySelector('.p-A').classList.contains('on')) {
+                        if(this.querySelector('.p-A').classList.contains('up')) {
                             inputCheck.checked = true;
                   } else {
                 inputCheck.checked = false;
@@ -1178,23 +1194,35 @@ background-color: green;
             
               })
 
-              const next = document.querySelector('.next');
-              next.addEventListener('click',function(e){
-                e.preventDefault();
-                document.querySelector('.next-up').classList.toggle('on');
-                
-                let inputCheck = this.querySelector('input[type="checkbox"]')
+   
+              const text = document.querySelectorAll('.num-0');
+            //   toggle 설정해서 label 설정 금지 add 설정은 않됨!!
+              const boxup = document.querySelector('.num-1 label');
+              console.log(text)
+              console.log(boxup)
 
-                if(document.querySelector('.next-up').classList.contains('on')) {
-                            inputCheck.checked = true;
-                 
-                }else{
-                    
-                    inputCheck.checked = false;
-                  }
-                  })
+              text.forEach(function(all){
+                boxup.addEventListener('click', function(){
+                    if(this.querySelector('.p-A').classList.contains('up')){
 
-                //   수리
+                        all.querySelector('input[type="checkbox"]').checked = true;
+                        all.querySelector('.p-A').classList.add('up');
+                        
+                    }else{
+                        all.querySelector('.p-A').classList.remove('up');
+                        all.querySelector('input[type="checkbox"]').checked = false;
+                    }
+                })
+              })
+
+
+
+
+
+
+
+             
+
                   
                    
 
