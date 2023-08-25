@@ -200,8 +200,8 @@ console.log(friendName)
 BtnR = document.querySelector('.Btn-right');
 BtnL = document.querySelector('.Btn-left');
 
-let small = 1;
-let Sup = 0;
+let small = 0;
+
 
 
 
@@ -210,16 +210,16 @@ BtnR.addEventListener('click',function(){
 
   if(small < friendName.length -1){
     small++;
-     Sup++;
-    document.querySelector('.footer-A .Operation').style.transform = 'translateX(-'+ (((small * 200)-small * 6)+Sup) + 'px)'
+    
+    document.querySelector('.footer-A .Operation').style.transform = 'translateX(-'+ small * 200 + 'px)'
   }
 })
 
 BtnL.addEventListener('click',function(){
   if(small > 0){
     small--;
-    Sup--;
-    document.querySelector('.footer-A .Operation').style.transform = 'translateX(-'+ (((small * 200)-small * 6)+Sup) + 'px)'
+   
+    document.querySelector('.footer-A .Operation').style.transform = 'translateX(-'+ small * 200 + 'px)'
     
   }
 })
