@@ -30,6 +30,7 @@
     align-items: center;
    }
    .section-A{
+    height: 100vh;
     width: 100%;
     justify-content: center;
     display: flex;
@@ -37,7 +38,7 @@
    .terms-M{
     position: relative;
     width: 600px;
-    height: 550px;
+    height: 610px;
     background-color: aliceblue;
     border-radius: 30px;
     overflow: hidden;
@@ -285,6 +286,16 @@ background-color: green;
 .num-0{
     width: 100%;
     height: 100%;
+}
+/* 다음 아래 문장 */
+.Btn-no{
+    color: red;
+    font-weight: 600;
+    padding-top: 10px;
+    display: none;
+}
+.Btn-no.off{
+    display: block;
 }
 </style>
 <body>
@@ -1057,7 +1068,7 @@ background-color: green;
                                 
                             </div>
                             
-                            <div class="num-0">
+                            <div class="num-0 Box-Ok">
                             <div class="terms-S">
                                 <label for="">
                                     <input type="checkbox">
@@ -1075,7 +1086,7 @@ background-color: green;
                             </div>
                                 
                             
-                            <div class="num-0">
+                            <div class="num-0 Box-Ok">
                             <div class="terms-S">
                                 <label for="">
                                     <input type="checkbox">
@@ -1096,11 +1107,13 @@ background-color: green;
                                 
                             
                             
-                            <div class="num-0">
+                            <div class="num-0 ">
                             <div class="terms-S">
                                 <label for="">
                                     <input type="checkbox">
                                         <button type="button" class="p-A"><i class="fa-solid fa-battery-full"></i></button>
+                                
+                                
                                         <div class="font-up">
                                             <div class="fount-box">
                                                 <h3>개인정보 유효기간 5년으로 설정</h3>
@@ -1114,22 +1127,24 @@ background-color: green;
                                 </div>
                             </div>
                                 
-                                
-                                <div class="terms-S">
+                            
+                            
+                            <div class="terms-S">
                                     <div class="next-up">
-                                        
-                                        <button type="button" class="next">다음
-                                            <input type="checkbox">
 
-                                        </button>
+                                            <button type="button" class="next">다음
+                                                <input type="checkbox">
+                                                
+                                            </button>
+                                        </div>
+                                        
+                                        
+                                        
+                                        
+                                        
                                     </div>
                                     
-                                    
-                                    
-                                  
-                                
-                            </div>
-                            
+                                    <p class="Btn-no">(필수) 건전지 확인해주세요!!!</p>
                             
                             
                             
@@ -1197,18 +1212,23 @@ background-color: green;
             
               })
 
+
+
               const next = document.querySelector('.next-up');
               next.addEventListener('click',function(up){
                 up.preventDefault();
                 this.classList.toggle('on');
                 document.querySelector('.next').classList.toggle('on')
-
+                let CountA = document.querySelectorAll('.Box-Ok label .p-A').length
+                let CountOn = document.querySelectorAll('.Box-Ok label .p-A.up').length
+                let CountAll = CountA + CountOn
                 let Check = this.querySelector('input[type="checkbox"]')
 
-                if(this.querySelector('.next').classList.contains('on')){
+                if(this.querySelector('.next').classList.contains('on') && CountAll == 4){
                     Check.checked = true;
-                    
+                    location.href = "join-the-membership.html"
                 }else{
+                    document.querySelector('.Btn-no').classList.add('off')
                     Check.checked = false;
                 }
               })
@@ -1236,8 +1256,8 @@ background-color: green;
                 })
               })
 
-              
-
+             
+           
 
 
 
