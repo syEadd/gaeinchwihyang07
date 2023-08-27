@@ -27,7 +27,7 @@ header{
 }
 .logo-img{
     width: 100px;
-    height: 60px;
+   
 }
 .logo-img img{
     width: 100%;
@@ -60,23 +60,44 @@ main{
 display: flex;
 justify-content: center;
 align-items: center;
-width: 100%;
-height: 700px;
+width: 100vw;
+height: 1200px;
 border-top:2px solid blue ;
 background-color: rgba(93, 145, 242, 0.2);
 
 }
 .Bubble-M{
-   width: 2000px;
-   height: 600px;
+    position: relative;
+   width: 1300px;
+   height: 1100px;
    border-radius: 20px;
    background-color: #FFF;
    border: 2px solid gold; 
 }
+/* 쓰레기 제거 */
+.trash{
+ display: none;
+position: absolute;
+top: 65%;
+right: 15%;
 
-
-
-
+}
+.trash button{
+    background-color: transparent;
+    border: none; 
+}
+.trash button i{
+color: gray;
+font-size: 40px;
+transition: transform 300ms  ease-in-out;
+}
+.trash button i:hover{
+    transform: scale(1.2);
+    color: rgb(231, 59, 59);
+}
+.trash.on{
+    display: block;
+}
 
 
 
@@ -211,9 +232,9 @@ li{
 /* 공용 key */
 
 .Bubble-Fighter{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    overflow: hidden;
+
 }
 /* 중요한 폰트 */
 .Bubble-main h1{
@@ -379,9 +400,177 @@ aside nav.on{
 }
  
     /* 이 다음 부터 */
+/* 임시 */
+.person-information{
+    display: flex;
+    flex-wrap: wrap;
+    width: 700px;
+    height: 250px;
+    justify-content:center ;
+    align-items: center;
+    margin: 0 auto;
+}
+.person-information li{
+    margin: 16px;
+    padding: 10px;
+background-color: rgb(9, 5, 93);
+    border-radius:20px ;
+    width: 100px;
+    height: 80px;
+border: 3px solid darkcyan;
+}
+.person-information li:hover{
+    transform: scale(1.2);
+  transition: transform 300ms ease-in-out;
+}
 
+.person-information button{
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+}
 
+.person-information button img{
+    width: 100%;
+    height: 100%;
+    filter: blur(4px);
+}
+.person-information button img:hover{
+    filter: blur(0px);
+}
+/* 전체 */
+.friend-card{
+    display: none;
+   margin: 0 auto;
+    perspective: 1100px;
+    width: 700px;
+    height: 500px;
+}
+.friend-card:hover .family-card{
+    transform: rotateY(180deg);
+}
+.family-card{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 4s;
+}
+.card-front,
+.card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+/* 앞쪽 */
+.card-back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #666;
+    border-radius: 20px;
+}
+.card-back h2{
+    color: skyblue;
+    padding: 15px;
+}
+.card-back button{
+    background-color: transparent;
+    border: none;
+    font-size: 60px;
+    color: yellow;
+}
+/* 뒤쪽 */
+.card-front{
+    border-radius: 20px;
+    display: flex;
+    height: 550px;
+    justify-content: space-between;
+    background-color: rgb(9, 5, 93, 0.5);
+    transform: rotateY(180deg);
 
+}
+.friend-img{
+    padding: 10px;
+    width: 45%;
+    height: 100%;
+}
+.friend-img img{
+    width: 100%;
+    height: 100%;    
+}
+.font-card p{
+    font-size: 16px;
+    position: relative;
+    padding: 10px;
+}
+.font-card p::before{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    content: '';
+    border-left: 5px solid darkblue ;
+    border-right: 5px solid transparent;
+    border-bottom:5px solid transparent ;
+    border-top: 5px solid transparent ;
+    transform: translateY(-50%);
+}
+.family-font{
+    width: 50%;
+}
+
+.family-font h1{
+    padding-top: 10px;
+    width: 120px;
+    text-align: center;
+}
+.family-font h4{
+    
+    padding: 10px 0 0 16px;
+    color: darkslategrey;
+}
+.main-font h5{
+    width: 300px;
+    height: 180px;
+    font-size: 20px;
+    padding-left: 20px;
+    color: rgb(0, 99, 99);
+    display: flex;
+    align-items: center;
+    
+}
+.main-font h2{
+    color: darkturquoise;
+    font-weight: 200;
+    padding: 20px;
+    flex-wrap: wrap;
+    width: 270px;
+    height: 90px;
+}
+.font-card{
+    padding: 16px ;
+}
+.font-card h2{
+    color: darkturquoise;
+    
+}
+.font-card h2 i{
+    padding-right: 8px;
+    color: darkgrey;
+}
+.font-card p{
+    color: rgb(0, 99, 99);
+
+}
+/* 리모콘 */
+
+.friend-card.on{
+    display: block;
+}
 
 
 
@@ -511,13 +700,58 @@ aside nav.on{
 
             <div class="character collection">
 
+                <div class="person-information">
+                    <li class=""><button type="button"><img src="./img/캐릭2.png" alt=""></button><p></p></li>
+                    <li class=""><button type="button"><img src="./img/캐릭8.png" alt=""></button></li>
+                    <li class=""><button type="button"><img src="./img/캐릭7.png" alt=""></button></li>
+                    <li class=""><button type="button"><img src="./img/캐릭6.png" alt=""></button></li>
+                    <li class=""><button type="button"><img src="./img/캐릭15.png" alt=""></button></li>
+                    <li class=""><button type="button"><img src="./img/캐릭14.png" alt=""></button></li>
+                    <li class=""><button type="button"><img src="./img/캐릭13.png" alt=""></button></li>
+                    <li class=""><button type="button"><img src="./img/캐릭12.png" alt=""></button></li>
+                    <li class=""><button type="button"><img src="./img//캐릭11.png" alt=""></button></li>
+                </div>
+                
                 <!-- 시작 -->
+                <div class="trash"><button type="button"><i class="fa-solid fa-trash-can"></i></button></div>
+         
+              <div class="friend-card card-1">
+                            
+                    <div class="family-card">
+                         
+                        <div class="card-front">
+                            <div class="friend-img">
+                                <img src="./소개 이미지/루시.png" alt="">
+                            </div>
 
+                            <div class="family-font">
+                                <h1></h1>
+                                <h4></h4>
+                                <div class="main-font">
+                                    <h2></h2>
+                                    <h5></h5>
+                                </div>
+                                <div class="font-card">
+                                    <h2><i class="fa-solid fa-circle-chevron-right"></i>특수기능</h2>
+                                    <p></p>
+                                    <p></p>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                                
 
+                        <div class="card-back">
+                            <h2>안에 캐릭터가 있습니다</h2>
+                            <button type="button"><i class="fa-solid fa-hand-pointer"></i></button>
+                        </div>
 
+                    </div>
 
+                </div> 
 
-
+            
+      
 
 
 
@@ -611,6 +845,224 @@ aside nav.on{
 
     })
 
+    let friend =[
+        {
+            h1 : '루시' ,
+            h4 : 'Lucy' ,
+            img : "./소개 이미지/루시.png",
+            h2 : '기버블시티의 걸크러시',
+            h5 : '패션에 대한 남다른 관심으로 어린 나이에 버블시티에서 혼자 유학생활을 하고 있는 당찬 소녀입니다. 차갑고 도도한 모습에 다가서기 어렵지만',
+            i : '특수기능',
+            p1 : '작은 몸집',
+            p2 : '이동속도 다소증가'
+        },
+        {
+            h1 : '케피' ,
+            h4 : 'Kephi' ,
+            img : "./소개 이미지/케피.png",
+            h2 : '든든하고 믿음직한 친구',
+            h5 : '파티에 케피가 있다면 안심이 됩니다. 케피는 든든하고 믿음직한 친구이기 때문이죠. 커다란 덩치 덕에 더 높은 체력을 가지고 있습니다.',
+            i : '특수기능',
+            p1 : 'HP 최대량 대폭 증가',
+            p2 : '물통 및 물폭탄 보급 시 HP 일정량 회복'
+
+        },
+        {
+            h1 : '디지니' ,
+            h4 : 'Dizni' ,
+            img : "./소개 이미지/디지니.png",
+            h2 : '기여성 버블파이터 대표 주자',
+            h5 : '수줍음이 많지만, 기회를 놓치지 않는 성격입니다. 말이 별로 없어 평소에는 조용한 듯 보이지만 승부를 결정하는 순간만큼은 누구보다도 정열적인 모습을 보여줍니다.',
+            i : '특수기능',
+            p1 : '기본 이동속도 증가',
+            p2 : '헬프 시 체력 증가' 
+        },
+        {
+            h1 : '배찌' ,
+            h4 : 'Bazzi' ,
+            img : "./소개 이미지/배찌.png",
+            h2 : '연속 구르기의 달인',
+            h5 : '잠이 많고 게으른 성격으로 벽 뒤에서 졸다가 친구들이 모두 집에 돌아간 다음에야 깨어나 당황하곤 합니다. 낙천적인 성격으로 팀이 지고 있어도 위축되지 않는 든든한 동료입니다.',
+            i : '특수기능',
+            p1 : '구르기 거리 다소 증가'
+       
+        },
+        {
+            h1 : '마리드' ,
+            h4 : 'Luxury Marid' ,
+            img : "./소개 이미지/마리드2.png",
+            h2 : '럭셔리한 그녀! 럭셔리 마리드를 만나보자!',
+            h5 : '말괄량이 주근깨 마리드가 예뻐진 모습과 명품 신상 옷을 입고 럭셔리하게 다오 배찌 친구들 앞에 나타났습니다! 이젠 라이벌 디지니를 제치고 다오의 사랑을 얻을 수 있을까요?',
+            p1 : '버물폭탄 스턴 시간 감소',
+            p2 :  '구르기 거리 다소 증가',
+            p3 : '이동속도 증가'
+        },
+        {
+            h1 : '모스' ,
+            h4 : 'Mos' ,
+            img : "./소개 이미지/모스.png",
+            h2 : '콤보팡의 테크니션',
+            h5 : '천재 기술자로 알려진 모스는 물총싸움의 달인이기도 합니다. 특히 최근에 모스는 “콤보팡”이라는 자신만의 특수 기술을 개발하여 모두를 깜짝 놀라게 했습니다.',
+            p1 : '콤보팡 가능',
+            p2 :  '팡 능력 강화',
+            p3 : '대시 속도 증가'
+        },
+        {
+            h1 : '에띠' ,
+            h4 : 'Ethi' ,
+            img : "./소개 이미지/에띠.png",
+            h2 : '물 폭탄의 스페셜리스트',
+            h5 : '에띠는 물총싸움보다는 물 폭탄의 원리와 개량에 더 마음을 쏟고 있습니다. 물 폭탄을 가능케 한 물 분자 압축기술을 발명한 것도 바로 에띠입니다. 자타공인 물 폭탄의 전문가인 에띠',
+            p1 : '버스폰 마다, 최초 1회 폭탄을 2개 던짐',
+            p2 :  '폭탄 스턴시간 감소'
+        },
+        {
+            h1 : '디오' ,
+            h4 : 'DAD' ,
+            img : "./소개 이미지/다오.png",
+            h2 : '기본기에 충실한 듬직한 파이터',
+            h5 : '정의롭고 착한 성격으로<br>버블에 갇힌 다른 파이터를 위해서 위험을 무릅쓰곤 합니다. 가끔 덜렁거리는 탓에 위험에 처하기도 하지만 친구들의 도움으로 위기를 모면합니다.',
+            p1 : '버블 시 점프력 & 이동속도 증가',
+            p2 :  '갇혀있는 시간 감소',
+            p3 : '리로드 속도 증가'
+        },
+        {
+            h1 : '우니' ,
+            h4 : 'Luxury Uni' ,
+            img : "./소개 이미지/우니2.png",
+            h2 : '더욱 멋있어진 우니! 더 이상 국민 동생이 아니다!',
+            h5 : '붐힐마을의 귀염둥이 막내 우니가 듬직하게 럭셔리한 모습으로 돌아왔습니다. 이젠 그 누구도 우니를 국민 동생이라 부르지 않습니다.',
+            p1 : '작은 몸집',
+            p2 :  '갇우니보다 강한 체력',
+            p3 : '이동속도 다소 증가'
+        }
+    ]
+      
+    
+   
+    
+    let Button = document.querySelectorAll('.person-information li');
+    
+    Button[0].addEventListener('click',function(){
+        document.querySelector('.trash').classList.add('on');
+        document.querySelector('.friend-card').classList.add('on')
+        document.querySelector('.friend-img img').src = friend[0].img;
+        document.querySelector('.family-font h1').innerHTML = friend[0].h1
+        document.querySelector('.family-font h4').innerHTML = friend[0].h4
+        document.querySelector('.main-font h2').innerHTML = friend[0].h2
+        document.querySelector('.main-font h5').innerHTML = friend[0].h5
+        document.querySelectorAll('.font-card p')[0].innerHTML = friend[0].p1
+        document.querySelectorAll('.font-card p')[1].innerHTML = friend[0].p2
+        
+    })
+    Button[1].addEventListener('click',function(){
+        document.querySelector('.trash').classList.add('on');
+        document.querySelector('.friend-card').classList.add('on')
+        document.querySelector('.friend-img img').src = friend[1].img;
+        document.querySelector('.family-font h1').innerHTML = friend[1].h1
+        document.querySelector('.family-font h4').innerHTML = friend[1].h4
+        document.querySelector('.main-font h2').innerHTML = friend[1].h2
+        document.querySelector('.main-font h5').innerHTML = friend[1].h5
+        document.querySelectorAll('.font-card p')[0].innerHTML = friend[1].p1
+        document.querySelectorAll('.font-card p')[1].innerHTML = friend[1].p2
+        
+    })
+    
+    Button[2].addEventListener('click',function(){
+        document.querySelector('.trash').classList.add('on');
+        document.querySelector('.friend-card').classList.add('on')
+        document.querySelector('.friend-img img').src = friend[2].img;
+        document.querySelector('.family-font h1').innerHTML = friend[2].h1
+        document.querySelector('.family-font h4').innerHTML = friend[2].h4
+        document.querySelector('.main-font h2').innerHTML = friend[2].h2
+        document.querySelector('.main-font h5').innerHTML = friend[2].h5
+        document.querySelectorAll('.font-card p')[0].innerHTML = friend[2].p1
+        document.querySelectorAll('.font-card p')[1].innerHTML = friend[2].p2
+        
+    })
+    Button[3].addEventListener('click',function(){
+        document.querySelector('.trash').classList.add('on');
+        document.querySelector('.friend-card').classList.add('on')
+        document.querySelector('.friend-img img').src = friend[3].img;
+        document.querySelector('.family-font h1').innerHTML = friend[3].h1
+        document.querySelector('.family-font h4').innerHTML = friend[3].h4
+        document.querySelector('.main-font h2').innerHTML = friend[3].h2
+        document.querySelector('.main-font h5').innerHTML = friend[3].h5
+        document.querySelectorAll('.font-card p')[0].innerHTML = friend[3].p1
+        
+    })
+    Button[4].addEventListener('click',function(){
+        document.querySelector('.trash').classList.add('on');
+        document.querySelector('.friend-card').classList.add('on')
+        document.querySelector('.friend-img img').src = friend[4].img;
+        document.querySelector('.family-font h1').innerHTML = friend[4].h1
+        document.querySelector('.family-font h4').innerHTML = friend[4].h4
+        document.querySelector('.main-font h2').innerHTML = friend[4].h2
+        document.querySelector('.main-font h5').innerHTML = friend[4].h5
+        document.querySelectorAll('.font-card p')[0].innerHTML = friend[4].p1
+        document.querySelectorAll('.font-card p')[1].innerHTML = friend[4].p2
+        document.querySelectorAll('.font-card p')[2].innerHTML = friend[4].p3
+        
+    })
+    Button[5].addEventListener('click',function(){
+        document.querySelector('.trash').classList.add('on');
+        document.querySelector('.friend-card').classList.add('on')
+        document.querySelector('.friend-img img').src = friend[5].img;
+        document.querySelector('.family-font h1').innerHTML = friend[5].h1
+        document.querySelector('.family-font h4').innerHTML = friend[5].h4
+        document.querySelector('.main-font h2').innerHTML = friend[5].h2
+        document.querySelector('.main-font h5').innerHTML = friend[5].h5
+        document.querySelectorAll('.font-card p')[0].innerHTML = friend[5].p1
+        document.querySelectorAll('.font-card p')[1].innerHTML = friend[5].p2
+        document.querySelectorAll('.font-card p')[2].innerHTML = friend[5].p3
+        
+    })
+    Button[6].addEventListener('click',function(){
+        document.querySelector('.trash').classList.add('on');
+        document.querySelector('.friend-card').classList.add('on')
+        document.querySelector('.friend-img img').src = friend[6].img;
+        document.querySelector('.family-font h1').innerHTML = friend[6].h1
+        document.querySelector('.family-font h4').innerHTML = friend[6].h4
+        document.querySelector('.main-font h2').innerHTML = friend[6].h2
+        document.querySelector('.main-font h5').innerHTML = friend[6].h5
+        document.querySelectorAll('.font-card p')[0].innerHTML = friend[6].p1
+        document.querySelectorAll('.font-card p')[1].innerHTML = friend[6].p2
+        
+    })
+    Button[7].addEventListener('click',function(){
+        document.querySelector('.trash').classList.add('on');
+        document.querySelector('.friend-card').classList.add('on')
+        document.querySelector('.friend-img img').src = friend[7].img;
+        document.querySelector('.family-font h1').innerHTML = friend[7].h1
+        document.querySelector('.family-font h4').innerHTML = friend[7].h4
+        document.querySelector('.main-font h2').innerHTML = friend[7].h2
+        document.querySelector('.main-font h5').innerHTML = friend[7].h5
+        document.querySelectorAll('.font-card p')[0].innerHTML = friend[7].p1
+        document.querySelectorAll('.font-card p')[1].innerHTML = friend[7].p2
+        document.querySelectorAll('.font-card p')[2].innerHTML = friend[7].p3
+        
+    })
+    Button[8].addEventListener('click',function(){
+        document.querySelector('.trash').classList.add('on');
+        document.querySelector('.friend-card').classList.add('on')
+        document.querySelector('.friend-img img').src = friend[8].img;
+        document.querySelector('.family-font h1').innerHTML = friend[8].h1
+        document.querySelector('.family-font h4').innerHTML = friend[8].h4
+        document.querySelector('.main-font h2').innerHTML = friend[8].h2
+        document.querySelector('.main-font h5').innerHTML = friend[8].h5
+        document.querySelectorAll('.font-card p')[0].innerHTML = friend[8].p1
+        document.querySelectorAll('.font-card p')[1].innerHTML = friend[8].p2
+        document.querySelectorAll('.font-card p')[2].innerHTML = friend[8].p3
+        
+    })
+    
+    document.querySelector('.trash').addEventListener('click',function(){
+        document.querySelector('.friend-card').classList.remove('on')
+        
+    })
+    
+    
+    
     // 사아드바
     const blackHole = document.querySelector('.Bubble-Top');
     const buttonOff = document.querySelector('.TOT > button');
