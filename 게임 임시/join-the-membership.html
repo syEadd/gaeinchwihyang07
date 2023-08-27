@@ -35,10 +35,11 @@
     justify-content: center;
     display: flex;
    }
+   /* 기본 */
    .terms-M{
     position: relative;
     width: 600px;
-    height: 1200px;
+    height: 1600px;
     background-color: aliceblue;
     border-radius: 30px;
     overflow: hidden;
@@ -71,6 +72,12 @@
    .p-A.on{
     color: blue;
    }
+   .p-A.off{
+    color: red;
+   }
+   .p-A.up{
+    color: green;
+   }
    .flont-user input{
     padding: 10px;
     width: 200px;
@@ -84,7 +91,43 @@
     padding: 5px;
     border-radius: 10px;
     border: 2px solid gold;
-   }
+}
+/* 연락처 기록 */
+    .contact{
+        background-color: #fff;
+        border: 2px solid greenyellow;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+    .contact select{
+        cursor: pointer;
+        padding-left: 40px;
+        width: 250px;
+        height: 50px;
+        font-size: 16px;
+        border: none;
+        outline: none;
+    }
+    .Certification-Number{
+        margin: 10px 0;
+        display: flex;
+        width: 310px;
+        border: 2px solid goldenrod;
+        justify-content: space-between;
+    }
+    .Certification-Number button{
+        border: none;
+        background-color: skyblue;
+        font-size: 20px;
+        padding: 5px;
+        font-weight:600;
+        color: green;
+        border-radius: 10px;
+    }
+    .Certification-Number button:hover{
+        background-color: blue;
+        color: aqua;
+    }
    .com{
     display: flex;
     width: 400px;
@@ -161,6 +204,7 @@ label input[type='radio'] {
     /* visibility: hidden; */
   display: none;
 }
+/* 리모콘 */
 .question-A{
     color: blue;
     display: none;
@@ -185,6 +229,98 @@ label input[type='radio'] {
 .question-C.on{
     display: block;
 }
+/* 주소 */
+.address{
+   
+    display: flex;
+    width: 350px;
+    justify-content: space-between;
+}
+.address button{
+    border: none;
+    background-color: skyblue;
+    font-size: 20px;
+    padding: 5px;
+    font-weight:600;
+    color: green;
+    border-radius: 10px;
+    width: 120px;
+    height: 50px;
+
+}
+.address button:hover{
+    background-color: yellowgreen;
+    color: rgb(34, 91, 111);
+}
+.num-D div{
+    margin-bottom: 10px;
+}
+.num-D div:first-child{
+    margin-bottom: 0px;
+}
+/* 가입 */
+.Customer-registration{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+}
+a{
+    text-decoration: none;
+}
+.Customer-registration button{
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: darkblue;
+    background-color: skyblue;
+    border: none;
+}
+/* 생년월일 */
+.Korean-date-of-birth{
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    
+}
+.year,.month,.Day{
+    overflow: hidden;
+    width: 150px;
+    height: 50px;
+    border-radius: 20px;
+}
+.month{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.month select{
+    background-color:rgb(118, 174, 230);
+    font-size: 20px;
+    font-weight: 600;
+    
+    padding-left: 50px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+}
+.year input{
+    padding-left: 20px;
+}
+.year input,
+.Day input{
+    background-color:skyblue;
+    width: 100%;
+    height: 100%;
+}
+.Day input{
+    padding-left: 30px;
+}
 </style>
 <body>
     <div class="balloon-user">
@@ -208,7 +344,7 @@ label input[type='radio'] {
                         <h1 class="terms-font">회원가입</h1>
                         <div class="water-balloon-user">
                             
-                            <div class="terms-S">
+                            <div class="terms-S name-ID">
                                 <label for="">
                                     <p class="p-A"><i class="fa-solid fa-battery-full"></i></p>
                                     
@@ -220,7 +356,7 @@ label input[type='radio'] {
                                 </label>
                             </div>
                             <p class="question-B">다시 한번 확인 부탁드립니다 회원님</p>
-                            
+                            <p class="question-A">Button 선택 해주세요.</p>
 
 
                             <div class="terms-S">
@@ -260,7 +396,7 @@ label input[type='radio'] {
 
 
 
-                            <div class="terms-S">
+                            <div class="terms-S name-email">
                                 <label for="">
                                     <p class="p-A"><i class="fa-solid fa-battery-full"></i></p>
                                     
@@ -334,7 +470,30 @@ label input[type='radio'] {
                                     
                                     <div class="flont-user">
                                         <h2>생년월일</h2>
-                                        <div class="font-size-up"><input type="text" placeholder="아이디 입력하시요"></div>
+                                        <div class="Korean-date-of-birth">
+                                            <div class="year"><input type="text" maxlength="4" placeholder="(OO년도)입력"></div>
+                                            <div class="month">
+                                                <select name="" id="" >
+                                                    <option value="" selected disabled hidden>월</option>
+                                                   <!-- selected ='false' 자동값으로  disabled => 비활성화  결론: 월(거짓)에서 움직이지 않아요  -->
+                                                   <!-- selected ='false' 자동값으로  disabled => 비활성화  결론: 월(거짓)에서 움직이지 않고 hidden 숨김  -->
+                                                  <option value="1">1</option>
+                                                  <option value="2">2</option>
+                                                  <option value="3">3</option>
+                                                  <option value="4">4</option>
+                                                  <option value="5">5</option>
+                                                  <option value="6">6</option>
+                                                  <option value="7">7</option>
+                                                  <option value="8">8</option>
+                                                  <option value="9">9</option>
+                                                  <option value="10">10</option>
+                                                  <option value="11">11</option>
+                                                  <option value="12">12</option>
+                                                </select>
+                                            </div>
+                                            
+                                            <div class="Day"><input type="text" maxlength="2" placeholder="(일)입력"></div>
+                                        </div>
                                     </div>
                                 </label>
                             </div>
@@ -343,19 +502,78 @@ label input[type='radio'] {
                          
                             
 
-                            <div class="terms-S">
+                            <div class="terms-S new-name">
                                 <label for="">
                                     <p class="p-A"><i class="fa-solid fa-battery-full"></i></p>
                                     
                                     
                                     <div class="flont-user">
-                                        <h2>주소</h2>
-                                        <div class="font-size-up"><input type="text" placeholder="아이디 입력하시요"></div>
+                                        <h2>이름</h2>
+                                        <div class="font-size-up"><input type="text" placeholder="이름입략하시오"></div>
                                     </div>
                                 </label>
                             </div>
                             <p class="question-B">다시 한번 확인 부탁드립니다 회원님</p>
                             
+
+
+                            <div class="terms-S ">
+                                <label for="">
+                                    <p class="p-A"><i class="fa-solid fa-battery-full"></i></p>
+                                    
+                                    
+                                    <div class="flont-user">
+                                        <h2>휴대전화</h2>
+                                        <div class="contact"> <select name="country">
+                                            <option value="233">가나 +233</option>
+                                            <option value="30">그리스 +30</option>
+                                            <option value="82" selected>대한민국 +82</option>
+                                            <option value="49">독일 +49</option>
+                                            <option value="960">몰디브 +960</option>
+                                            <option value="1">미국/캐나다 +1</option>
+                                            <option value="254">케나 +254</option>
+                                          </select></div>
+                                        <div class="Certification-Number">
+                                            <div class="font-size-up"><input type="text" placeholder="전화번호 입력"></div>
+                                            <button id="certification" type="button">인증번호</button>
+                                        </div>
+                                        <div class="font-size-up"><input type="text" placeholder="인증번호 확인해주세요"></div>
+                                    </div>
+                                </label>
+                            </div>
+                            <p class="question-B">다시 한번 확인 부탁드립니다 회원님</p>
+
+
+
+                            <div class="terms-S ">
+                                <label for="">
+                                    <p class="p-A"><i class="fa-solid fa-battery-full"></i></p>
+                                    
+                                    
+                                    <div class="flont-user num-D">
+                                        <h2>주소</h2>
+                                        <div class="address">
+                                            <div class="font-size-up"><input type="text" placeholder="우편 번호"></div>
+                                            <button type="button">우편번호 찾기</button>
+                                        </div>
+                                        <div class="font-size-up"><input type="text" placeholder="주소"></div>
+                                        <div class="font-size-up"><input type="text" placeholder="상세주소"></div>
+                                        <div class="font-size-up"><input type="text" placeholder="참고항목"></div>
+                                        
+                                    </div>
+                                </label>
+                            </div>
+                            <p class="question-B">다시 한번 확인 부탁드립니다 회원님</p>
+
+
+
+                            
+                                        <a href=""><div class="Customer-registration"><button type="button">가입하기</button></div></a>
+                                
+                          
+                            
+
+
                         </form>
                         
                         
@@ -367,6 +585,7 @@ label input[type='radio'] {
                     let label = document.querySelectorAll('.button-on div');
                 console.log(label)
                 label.forEach(function(box){
+
                     box.addEventListener('click',function(e){
                         e.preventDefault();
                         this.querySelector('.button-name').classList.toggle('yes')
@@ -384,11 +603,82 @@ label input[type='radio'] {
                         inputCheck.checked = false;
                         document.querySelectorAll('.p-A')[4].classList.add('on')
                         document.querySelector('.question-A').classList.add('go')
-                      }
+                    }
+                })
+                
+            })
+            let d = document.querySelectorAll('.p-A')
+            console.log(d)
+            // 아이디
+            document.querySelector('.name-ID input').addEventListener('focusout',function(){
+                let Myself = this.value;
+                let MyID = /^[a-z0-9]{5,8}$/;
+                
+                if(Myself.length == 0){
+                    document.querySelectorAll('.p-A')[0].classList.add('on')
+                }else if(!MyID.test(Myself)){
+                    document.querySelectorAll('.p-A')[0].classList.add('off')
+                    
+                }else{
+                    document.querySelectorAll('.p-A')[0].classList.add('up')
+                    
+                }
+                
+            })
+            
+            
+            
+            
+            // 이메일
+            document.querySelector('.name-email input').addEventListener('focusout',function(){
+                let Email = this.value;
+                let MyEmail = /^[a-z0-9]{5,7}$/;
+                
+                if(Email.length == 0){
+                    document.querySelectorAll('.p-A')[3].classList.add('on')
+                    document.querySelectorAll('.p-A')[3].classList.remove('off')
+                    document.querySelectorAll('.p-A')[3].classList.remove('up')
+                    
+                }else if(!MyEmail.test(Email)){
+                    document.querySelectorAll('.p-A')[3].classList.add('off')
+                    document.querySelectorAll('.p-A')[3].classList.remove('up')
+                    document.querySelectorAll('.p-A')[3].classList.remove('on')
+                }else{
+                    document.querySelectorAll('.p-A')[3].classList.add('up')
+                    document.querySelectorAll('.p-A')[3].classList.remove('off')
+                    document.querySelectorAll('.p-A')[3].classList.remove('on')
+
+                }
             })
 
+
+
+
+
+
+
+            //    이름
+            document.querySelector('.new-name input').addEventListener('focusout',function(){
+                let Name = this.value;
+
+                let MyName = /^[가-힣]{2,5}$/;
+                
+                if(Name.length == 0 ){
+                    document.querySelectorAll('.p-A')[6].classList.add('on')
+                    document.querySelectorAll('.p-A')[6].classList.remove('off')
+                    document.querySelectorAll('.p-A')[6].classList.remove('up')
+                    
+                }else if(!MyName.test(Name)){
+                    document.querySelectorAll('.p-A')[6].classList.add('off')
+                    document.querySelectorAll('.p-A')[6].classList.remove('up')
+                    document.querySelectorAll('.p-A')[6].classList.remove('on')
+                }else{
+                    document.querySelectorAll('.p-A')[6].classList.add('up')
+                    document.querySelectorAll('.p-A')[6].classList.remove('off')
+                    document.querySelectorAll('.p-A')[6].classList.remove('on')
+                    
+            }
         })
-       
                 </script>
 </body>
 </html>
