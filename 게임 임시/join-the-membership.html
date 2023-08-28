@@ -360,7 +360,7 @@ a{
                             <p class="question-A">Button 선택 해주세요.</p>
 
 
-                            <div class="terms-S">
+                            <div class="terms-S secret-number">
                                 <label for="">
                                     <p class="p-A"><i class="fa-solid fa-battery-full"></i></p>
                                     
@@ -378,7 +378,7 @@ a{
                             
 
 
-                            <div class="terms-S">
+                            <div class="terms-S reconfirm">
                                 <label for="">
                                     <p class="p-A"><i class="fa-solid fa-battery-full"></i></p>
                                     
@@ -653,10 +653,48 @@ a{
             })
 
 
+            // 비밀번호
+            document.querySelector('.secret-number input').addEventListener('focusout',function(){
+                let PW = this.value;
+                let pwExp = /^[A-Za-z0-9`~!@#\$%\^&\*\(\)\{\}\[\]\-_=\+\\|;:'"<>,\./\?]{8,20}$/;
+
+                if(PW.length == 0){
+                    document.querySelectorAll('.p-A')[1].classList.add('on')
+                    document.querySelectorAll('.p-A')[1].classList.remove('off')
+                    document.querySelectorAll('.p-A')[1].classList.remove('up')
+                    
+                }else if(!pwExp.test(PW)){
+                    document.querySelectorAll('.p-A')[1].classList.add('off')
+                    document.querySelectorAll('.p-A')[1].classList.remove('up')
+                    document.querySelectorAll('.p-A')[1].classList.remove('on')
+
+                }else{
+                    document.querySelectorAll('.p-A')[1].classList.add('up')
+                    document.querySelectorAll('.p-A')[1].classList.remove('off')
+                    document.querySelectorAll('.p-A')[1].classList.remove('on')
+                }
+            })
 
 
+            // 재확인
+            document.querySelector('.reconfirm input').addEventListener('focusout',function(){
+                let reconfirm = this.value;
+                if(reconfirm.length == 0){
+                    document.querySelectorAll('.p-A')[2].classList.add('on')
+                    document.querySelectorAll('.p-A')[2].classList.remove('off')
+                    document.querySelectorAll('.p-A')[2].classList.remove('up')
+                }else if(reconfirm == document.querySelector('.secret-number input').value){
+                    document.querySelectorAll('.p-A')[2].classList.add('up')
+                    document.querySelectorAll('.p-A')[2].classList.remove('off')
+                    document.querySelectorAll('.p-A')[2].classList.remove('on')
+                }else{
+                    document.querySelectorAll('.p-A')[2].classList.add('off')
+                    document.querySelectorAll('.p-A')[2].classList.remove('up')
+                    document.querySelectorAll('.p-A')[2].classList.remove('on')
 
 
+                }
+            })
 
             //    이름
             document.querySelector('.new-name input').addEventListener('focusout',function(){
