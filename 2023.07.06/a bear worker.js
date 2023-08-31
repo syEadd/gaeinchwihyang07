@@ -4,6 +4,6 @@ console.log(a)
 a.forEach(function(e,index){
   
    
-   console.log(e,index < 2)
-   console.log(e,index)
+//    console.log(e,index < 2)
+   console.log(e,index == 1)
 })

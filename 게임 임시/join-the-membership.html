@@ -670,17 +670,32 @@
                         TodayDate = TodayDate.getTime();
                         
                         if(year.length != 4){
-                            
+                            document.querySelectorAll('.p-A')[5].classList.add('on')
+                        document.querySelectorAll('.p-A')[5].classList.remove('off')
+                        document.querySelectorAll('.p-A')[5].classList.remove('up')
                         }else if(Day.length == 0 || Day > 31 || Day <= 0){
+                            // 경고메시지
+                        document.querySelectorAll('.p-A')[5].classList.add('off')
+                        document.querySelectorAll('.p-A')[5].classList.remove('up')
+                        document.querySelectorAll('.p-A')[5].classList.remove('on')
                             
                         }else if(isNaN(year * month * Day)){
+                             // 경고메시지
+                        document.querySelectorAll('.p-A')[5].classList.add('off')
+                        document.querySelectorAll('.p-A')[5].classList.remove('up')
+                        document.querySelectorAll('.p-A')[5].classList.remove('on')
                             
                         }else if(date - year > 100){
-                            
-                        }else if(NewDate < TodayDate){
+                             // 경고메시지
+                        document.querySelectorAll('.p-A')[5].classList.add('off')
+                        document.querySelectorAll('.p-A')[5].classList.remove('up')
+                        document.querySelectorAll('.p-A')[5].classList.remove('on')
+                     
                             
                         }else{
-                            
+                        document.querySelectorAll('.p-A')[5].classList.add('up')
+                        document.querySelectorAll('.p-A')[5].classList.remove('off')
+                        document.querySelectorAll('.p-A')[5].classList.remove('on')
                         }
                         
                     })
