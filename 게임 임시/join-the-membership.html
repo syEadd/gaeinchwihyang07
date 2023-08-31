@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
     <script src="https://kit.fontawesome.com/a19afa0290.js" crossorigin="anonymous"></script>
+    <!-- naver -->
 </head>
 <style>
-        *{
+    *{
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
-  
-        /* 기존 틀 */
+    
+    /* 기존 틀 */
     .balloon-user{
         background-image: url('./img/이용약관.jpeg'); 
         width: 100vw;
@@ -23,76 +24,80 @@
         background-size: cover;
         overflow: hidden; 
     }
-   header{
-    width: 100%;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   }
-   .section-A{
-    width: 100%;
-    justify-content: center;
-    display: flex;
-   }
-   /* 기본 */
-   .terms-M{
-    position: relative;
-    width: 600px;
-    height: 1600px;
-    background-color: aliceblue;
-    border-radius: 30px;
-    overflow: hidden;
-   }
-  
-   .terms-font{
-    border-bottom: 2px solid gainsboro;
-    text-align: center;
-    padding: 20px;
-    width: 100%;
-   }
-   .terms-S{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    border: 2px solid firebrick;
-    margin-top: 30px;
-   }
-   .terms-S label{
-    align-items: center;
-    display: flex;
+    header{
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .section-A{
+        width: 100%;
+        justify-content: center;
+        display: flex;
+    }
+    /* 기본 */
+    .terms-M{
+        position: relative;
+        width: 600px;
+        height: 1600px;
+        background-color: aliceblue;
+        border-radius: 30px;
+        overflow: hidden;
+    }
     
-   }
-   .p-A{
-    color: #666;
-    padding: 16px;
-    font-size: 30px;
-   }
-   
-   .p-A.on{
-    color: blue;
-   }
-   .p-A.off{
-    color: red;
-   }
-   .p-A.up{
-    color: green;
-   }
-   .flont-user input{
-    padding: 10px;
-    width: 200px;
-    height: 40px;
-    font-size: 16px;
-    border: none;
-    outline: none;
-   }
-   .font-size-up{
-    background-color: #fff;
-    padding: 5px;
-    border-radius: 10px;
-    border: 2px solid gold;
-}
-/* 연락처 기록 */
+    .terms-font{
+        border-bottom: 2px solid gainsboro;
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+    }
+    .terms-S{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        border: 2px solid firebrick;
+        margin-top: 30px;
+    }
+    .terms-S label{
+        align-items: center;
+        display: flex;
+        
+    }
+    .p-A{
+        color: #666;
+        padding: 16px;
+        font-size: 30px;
+    }
+    
+    .p-A.on{
+        color: blue;
+    }
+    .p-A.off{
+        color: red;
+    }
+    .p-A.up{
+        color: green;
+    }
+    .flont-user input{
+        padding: 10px;
+        width: 200px;
+        height: 40px;
+        font-size: 16px;
+        border: none;
+        outline: none;
+    }
+    .font-size-up{
+        background-color: #fff;
+        padding: 5px;
+        border-radius: 10px;
+        border: 2px solid gold;
+    }
+    .font-size-up.on{
+        border: 2px solid darkblue;
+        
+    }
+    /* 연락처 기록 */
     .contact{
         background-color: #fff;
         border: 2px solid greenyellow;
@@ -128,204 +133,217 @@
         background-color: blue;
         color: aqua;
     }
-   .com{
-    display: flex;
-    width: 400px;
-    justify-content: space-between;
-   }
-   .font-com{
+    .com{
+        display: flex;
+        width: 400px;
+        justify-content: space-between;
+    }
+    .font-com{
         display: flex;
         align-items: center;
-       background-color: #fff;
+        background-color: #fff;
         padding: 5px;
         border-radius: 10px;
         border: 2px solid darkorange;
-   }
-   .font-com select{
-    padding: 10px;
-    width: 150px;
-    height: 40px;
-    font-size: 16px;
-    border: none;
-    outline: none;
-   }
-   h2{
-    margin-bottom: 5px;
-   }
-   .button-open{
-    background-color: transparent;
-    border: none;
-   }
-   .button-on{
-    display: flex;
-    /* border: 2px solid firebrick; */
-    width: 500px;
-    justify-content: space-between;
-}
-.button-on button{
-    color: green;
-    background-color: transparent;
-    border: none;
-    font-weight: 600;
-    font-size: 16px;
-    border: 2px solid firebrick;
-    font-size: 20px;
-}
-.button-on button.on{
-    
-    color:darkorange;
-}
-.button-open-1,
-.button-open-2,
-.button-open-3{
-    display: flex;
-    justify-content: center;
-    width: 30%;
-    height: 50px;
-    align-items: center;
-}
-.button-name{
-    border-radius: 20px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: skyblue;
-    
-}
-.button-name.yes{
-    background-color: yellowgreen;
-}
-.button-name:hover{
-    background-color: yellowgreen;
-}
-label input[type='radio'] {
-    /* visibility: hidden; */
-  display: none;
-}
-/* 리모콘 */
-.question-A{
-    color: blue;
-    display: none;
-    padding:10px ;
-}
-.question-A.go{
-    display: block;
-}
-.question-B{
-    color: red;
-    display: none;
-    padding:10px ;
-}
-.question-B.on{
-    display: block;
-}
-.question-C{
-    color: green;
-    display: none;
-    padding:10px ;
-}
-.question-C.on{
-    display: block;
-}
-/* 주소 */
-.address{
-   
-    display: flex;
-    width: 350px;
-    justify-content: space-between;
-}
-.address button{
-    border: none;
-    background-color: skyblue;
-    font-size: 20px;
-    padding: 5px;
-    font-weight:600;
-    color: green;
-    border-radius: 10px;
-    width: 120px;
-    height: 50px;
-
-}
-.address button:hover{
-    background-color: yellowgreen;
-    color: rgb(34, 91, 111);
-}
-.num-D div{
-    margin-bottom: 10px;
-}
-.num-D div:first-child{
-    margin-bottom: 0px;
-}
-/* 가입 */
-.Customer-registration{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 90px;
-}
-a{
-    text-decoration: none;
-}
-.Customer-registration button{
-    border-radius: 20px;
-    padding: 20px;
-    font-size: 20px;
-    font-weight: 600;
-    color: darkblue;
-    background-color: skyblue;
-    border: none;
-}
-/* 생년월일 */
-.Korean-date-of-birth{
-    display: flex;
-    width: 500px;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    
-}
-.year,.month,.Day{
-    overflow: hidden;
-    width: 150px;
-    height: 50px;
-    border-radius: 20px;
-}
-.month{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.month select{
-    background-color:rgb(118, 174, 230);
-    font-size: 20px;
-    font-weight: 600;
-    
-    padding-left: 50px;
-    width: 100%;
-    height: 100%;
-    border: none;
-    outline: none;
-}
-.year input{
-    padding-left: 20px;
-}
-.year input,
-.Day input{
-    font-weight: 700;
-    background-color:skyblue;
-    width: 100%;
-    height: 100%;
-}
-.Day input{
-    padding-left: 30px;
-}
-</style>
+    }
+    .font-com select{
+        padding: 10px;
+        width: 150px;
+        height: 40px;
+        font-size: 16px;
+        border: none;
+        outline: none;
+    }
+    h2{
+        margin-bottom: 5px;
+    }
+    .button-open{
+        background-color: transparent;
+        border: none;
+    }
+    .button-on{
+        display: flex;
+        /* border: 2px solid firebrick; */
+        width: 500px;
+        justify-content: space-between;
+    }
+    .button-on button{
+        color: green;
+        background-color: transparent;
+        border: none;
+        font-weight: 600;
+        font-size: 16px;
+        border: 2px solid firebrick;
+        font-size: 20px;
+    }
+    .button-on button.on{
+        
+        color:darkorange;
+    }
+    .button-open-1,
+    .button-open-2,
+    .button-open-3{
+        display: flex;
+        justify-content: center;
+        width: 30%;
+        height: 50px;
+        align-items: center;
+    }
+    .button-name{
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: skyblue;
+        
+    }
+    .button-name.yes{
+        background-color: yellowgreen;
+    }
+    .button-name:hover{
+        background-color: yellowgreen;
+    }
+    label input[type='radio'] {
+        /* visibility: hidden; */
+        display: none;
+    }
+    /* 리모콘 */
+    .question-A{
+        color: blue;
+        display: none;
+        padding:10px ;
+    }
+    .question-A.go{
+        display: block;
+    }
+    .question-B{
+        color: red;
+        display: none;
+        padding:10px ;
+    }
+    .question-B.on{
+        display: block;
+    }
+    .question-C{
+        color: green;
+        display: none;
+        padding:10px ;
+    }
+    .question-C.on{
+        display: block;
+    }
+    /* 주소 */
+    .address{
+        
+        display: flex;
+        width: 350px;
+        justify-content: space-between;
+    }
+    .address button input{
+        width: 100%;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        color: darkgreen;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .address button{
+        border: none;
+        background-color: skyblue;
+        font-size: 20px;
+        padding: 5px;
+        font-weight:600;
+        color: green;
+        border-radius: 10px;
+        width: 120px;
+        height: 50px;
+        
+    }
+    .address button:hover{
+        background-color: yellowgreen;
+        color: rgb(34, 91, 111);
+    }
+    .num-D div{
+        margin-bottom: 10px;
+    }
+    .num-D div:first-child{
+        margin-bottom: 0px;
+    }
+    /* 가입 */
+    .Customer-registration{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 90px;
+    }
+    a{
+        text-decoration: none;
+    }
+    .Customer-registration button{
+        border-radius: 20px;
+        padding: 20px;
+        font-size: 20px;
+        font-weight: 600;
+        color: darkblue;
+        background-color: skyblue;
+        border: none;
+    }
+    /* 생년월일 */
+    .Korean-date-of-birth{
+        display: flex;
+        width: 500px;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        
+    }
+    .year,.month,.Day{
+        overflow: hidden;
+        width: 150px;
+        height: 50px;
+        border-radius: 20px;
+    }
+    .month{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .month select{
+        background-color:rgb(118, 174, 230);
+        font-size: 20px;
+        font-weight: 600;
+        
+        padding-left: 50px;
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+    }
+    .year input{
+        padding-left: 20px;
+    }
+    .year input,
+    .Day input{
+        font-weight: 700;
+        background-color:skyblue;
+        width: 100%;
+        height: 100%;
+    }
+    .Day input{
+        padding-left: 50px;
+    }
+    /* 포커스 */
+    .input.on{
+        border: 3px solid firebrick;
+    }
+    </style>
 <body>
     <div class="balloon-user">
-
+        
         <header>
             <div class="Title-of-use">
                 <a href="./index.html">
@@ -337,387 +355,503 @@ a{
             <div class="terms-M">
                 <!-- action 다음폐이지 설정 -->
                 
-
-            
                 
-
-                    <form id="terms" action="">
-                        <h1 class="terms-font">회원가입</h1>
-                        <div class="water-balloon-user">
-                            
-                            <div class="terms-S name-ID">
-                                <label for="">
-                                    <p class="p-A"><i class="fa-solid fa-battery-full"></i></p>
-                                    
-                                    
-                                    <div class="flont-user">
-                                        <h2>아이디</h2>
-                                        <div class="font-size-up"><input type="text" placeholder="아이디 입력하시요"></div>
-                                    </div>
-                                </label>
-                            </div>
-                            <p class="question-B">다시 한번 확인 부탁드립니다 회원님</p>
-                            <p class="question-A">Button 선택 해주세요.</p>
-
-
-                            <div class="terms-S secret-number">
-                                <label for="">
-                                    <p class="p-A"><i class="fa-solid fa-battery-full"></i></p>
-                                    
-                                    <div class="flont-user">
-                                        <h2>비밀번호</h2>
-                                        <div class="font-size-up">
-                                            <input type="password" placeholder="비밀번호 입력하시요">
-                                        </div>
-                                    </div>
-                                </label>
-                            </div>
-                            <p class="question-B">다시 한번 확인 부탁드립니다 회원님</p>
-                            <p class=""></p>
+                
+                
+                
+                <form id="terms" action="">
+                    <h1 class="terms-font">회원가입</h1>
+                    <div class="water-balloon-user">
                         
-                            
-
-
-                            <div class="terms-S reconfirm">
-                                <label for="">
-                                    <p class="p-A"><i class="fa-solid fa-battery-full"></i></p>
-                                    
-                                    <div class="flont-user">
-                                        <h2>비밀번호재확인</h2>
-                                        <div class="font-size-up">
-                                            <input type="password" placeholder="비밀번호 입력하시요">
-                                        </div>
-                                        
-                                    </div>
-                                </label>
-                            </div>
-                            <p class="question-B">다시 한번 확인 부탁드립니다 회원님</p>
-                            <p class=""></p>
-                            
-
-
-
-                            <div class="terms-S name-email">
-                                <label for="">
-                                    <p class="p-A"><i class="fa-solid fa-battery-full"></i></p>
-                                    
-                                    <div class="flont-user">
-                                        <h2>이메일</h2>
-                                        <div class="com">
-                                            <div class="font-size-up">
-                                                <input type="text" placeholder="이메일 입력하시요">
-                                            </div>
-                                            
-                                            <div class="font-com">
-                                                <select name="" id="">
-                                                    <option>@naver.com</option>
-                                                    <option>@yahoo.co.kr</option>
-                                                    <option>@hanmir.com</option>
-                                                    <option>@daum.net</option>
-                                                    <option>@google.com</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        
-                                        
-                                    </div>
-                                </label>
-                            </div>
-                            <p class="question-B">다시 한번 확인 부탁드립니다 회원님</p>
-                            <p class=""></p>
-                            
-                            
-                            <div class="terms-S">
-                                <label for="">
-                                    <p class="p-A"><i class="fa-solid fa-battery-full"></i></p>
-                                    <div class="button-go">
-                                        <h2>성별</h2>
-                                        <div class="button-on">
-                                            
-                                            <div class="button-open-1">
-                                                <div class="button-name">
-
-                                                    <input type="radio" value="2">
-                                                    <button type="button">여자</button>
-                                                </div>
-                                             </div>
-                                            <div class="button-open-2">
-                                                <div class="button-name">
-
-                                                    <input type="radio" value="1">
-                                                    <button type="button">남자</button>
-                                                </div>
-                                            </div>
-                                            <div class="button-open-3">
-                                                <div class="button-name">
-
-                                                    <input type="radio" value="0">
-                                                    <button type="button">선택 않함</button>
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                        
-                                    </div>
-                                </label>
-                            </div>
-                            <p class="question-A">Button 선택 해주세요.</p>
-                            
-
-                            <div class="terms-S">
-                                <label for="">
-                                    <p class="p-A"><i class="fa-solid fa-battery-full"></i></p>
-                                    
-                                    
-                                    <div class="flont-user">
-                                        <h2>생년월일</h2>
-                                        <div class="Korean-date-of-birth">
-                                            <div class="year"><input type="text" maxlength="4" placeholder="(OO년도)입력"></div>
-                                            <div class="month">
-                                                <select name="" id="" >
-                                                    <option value="" selected disabled hidden>월</option>
-                                                   <!-- selected ='false' 자동값으로  disabled => 비활성화  결론: 월(거짓)에서 움직이지 않아요  -->
-                                                   <!-- selected ='false' 자동값으로  disabled => 비활성화  결론: 월(거짓)에서 움직이지 않고 hidden 숨김  -->
-                                                  <option value="1">1</option>
-                                                  <option value="2">2</option>
-                                                  <option value="3">3</option>
-                                                  <option value="4">4</option>
-                                                  <option value="5">5</option>
-                                                  <option value="6">6</option>
-                                                  <option value="7">7</option>
-                                                  <option value="8">8</option>
-                                                  <option value="9">9</option>
-                                                  <option value="10">10</option>
-                                                  <option value="11">11</option>
-                                                  <option value="12">12</option>
-                                                </select>
-                                            </div>
-                                            
-                                            <div class="Day"><input type="text" maxlength="2" placeholder="(일)입력"></div>
-                                        </div>
-                                    </div>
-                                </label>
-                            </div>
-                            <p class="question-B">생년월일 4자 년도 입력 하시오.</p>
-                            
-                         
-                            
-
-                            <div class="terms-S new-name">
-                                <label for="">
-                                    <p class="p-A"><i class="fa-solid fa-battery-full"></i></p>
-                                    
-                                    
-                                    <div class="flont-user">
-                                        <h2>이름</h2>
-                                        <div class="font-size-up"><input type="text" placeholder="이름입략하시오"></div>
-                                    </div>
-                                </label>
-                            </div>
-                            <p class="question-B">다시 한번 확인 부탁드립니다 회원님</p>
-                            
-
-
-                            <div class="terms-S ">
-                                <label for="">
-                                    <p class="p-A"><i class="fa-solid fa-battery-full"></i></p>
-                                    
-                                    
-                                    <div class="flont-user">
-                                        <h2>휴대전화</h2>
-                                        <div class="contact"> <select name="country">
-                                            <option value="233">가나 +233</option>
-                                            <option value="30">그리스 +30</option>
-                                            <option value="82" selected>대한민국 +82</option>
-                                            <option value="49">독일 +49</option>
-                                            <option value="960">몰디브 +960</option>
-                                            <option value="1">미국/캐나다 +1</option>
-                                            <option value="254">케나 +254</option>
-                                          </select></div>
-                                        <div class="Certification-Number">
-                                            <div class="font-size-up"><input type="text" placeholder="전화번호 입력"></div>
-                                            <button id="certification" type="button">인증번호</button>
-                                        </div>
-                                        <div class="font-size-up"><input type="text" placeholder="인증번호 확인해주세요"></div>
-                                    </div>
-                                </label>
-                            </div>
-                            <p class="question-B">다시 한번 확인 부탁드립니다 회원님</p>
-
-
-
-                            <div class="terms-S ">
-                                <label for="">
-                                    <p class="p-A"><i class="fa-solid fa-battery-full"></i></p>
-                                    
-                                    
-                                    <div class="flont-user num-D">
-                                        <h2>주소</h2>
-                                        <div class="address">
-                                            <div class="font-size-up"><input type="text" placeholder="우편 번호"></div>
-                                            <button type="button">우편번호 찾기</button>
-                                        </div>
-                                        <div class="font-size-up"><input type="text" placeholder="주소"></div>
-                                        <div class="font-size-up"><input type="text" placeholder="상세주소"></div>
-                                        <div class="font-size-up"><input type="text" placeholder="참고항목"></div>
-                                        
-                                    </div>
-                                </label>
-                            </div>
-                            <p class="question-B">다시 한번 확인 부탁드립니다 회원님</p>
-
-
-
-                            
-                                        <a href=""><div class="Customer-registration"><button type="button">가입하기</button></div></a>
+                        <div class="terms-S name-ID">
+                            <label for="">
+                                <p class="p-A"><i class="fa-solid fa-battery-full"></i></p>
                                 
-                          
-                            
-
-
-                        </form>
+                                
+                                <div class="flont-user">
+                                    <h2>아이디</h2>
+                                    <div class="font-size-up"><input type="text" placeholder="아이디 입력하시요"></div>
+                                </div>
+                            </label>
+                        </div>
+                        <p class="question-B">다시 한번 확인 부탁드립니다 회원님</p>
+                        <p class="question-A">Button 선택 해주세요.</p>
+                        
+                        
+                        <div class="terms-S secret-number">
+                            <label for="">
+                                <p class="p-A"><i class="fa-solid fa-battery-full"></i></p>
+                                
+                                <div class="flont-user">
+                                    <h2>비밀번호</h2>
+                                    <div class="font-size-up">
+                                        <input type="password" placeholder="비밀번호 입력하시요">
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <p class="question-B">다시 한번 확인 부탁드립니다 회원님</p>
+                        <p class=""></p>
                         
                         
                         
-                    </section>
-                </div>  
+                        
+                        <div class="terms-S reconfirm">
+                            <label for="">
+                                <p class="p-A"><i class="fa-solid fa-battery-full"></i></p>
+                                
+                                <div class="flont-user">
+                                    <h2>비밀번호재확인</h2>
+                                    <div class="font-size-up">
+                                        <input type="password" placeholder="비밀번호 입력하시요">
+                                    </div>
+                                    
+                                </div>
+                            </label>
+                        </div>
+                        <p class="question-B">다시 한번 확인 부탁드립니다 회원님</p>
+                        <p class=""></p>
+                        
+                        
+                        
+                        
+                        <div class="terms-S name-email">
+                            <label for="">
+                                <p class="p-A"><i class="fa-solid fa-battery-full"></i></p>
+                                
+                                <div class="flont-user">
+                                    <h2>이메일</h2>
+                                    <div class="com">
+                                        <div class="font-size-up">
+                                            <input type="text" placeholder="이메일 입력하시요">
+                                        </div>
+                                        
+                                        <div class="font-com">
+                                            <select name="" id="">
+                                                <option>@naver.com</option>
+                                                <option>@yahoo.co.kr</option>
+                                                <option>@hanmir.com</option>
+                                                <option>@daum.net</option>
+                                                <option>@google.com</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                            </label>
+                        </div>
+                        <p class="question-B">다시 한번 확인 부탁드립니다 회원님</p>
+                        <p class=""></p>
+                        
+                        
+                        <div class="terms-S">
+                            <label for="">
+                                <p class="p-A"><i class="fa-solid fa-battery-full"></i></p>
+                                <div class="button-go">
+                                    <h2>성별</h2>
+                                    <div class="button-on">
+                                        
+                                        <div class="button-open-1">
+                                            <div class="button-name">
+                                                
+                                                <input type="radio" value="2">
+                                                <button type="button">여자</button>
+                                            </div>
+                                        </div>
+                                        <div class="button-open-2">
+                                            <div class="button-name">
+                                                
+                                                <input type="radio" value="1">
+                                                <button type="button">남자</button>
+                                            </div>
+                                        </div>
+                                        <div class="button-open-3">
+                                            <div class="button-name">
+                                                
+                                                <input type="radio" value="0">
+                                                <button type="button">선택 않함</button>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </label>
+                        </div>
+                        <p class="question-A">Button 선택 해주세요.</p>
+                        
+                        
+                        <div class="terms-S">
+                            <label for="">
+                                <p class="p-A"><i class="fa-solid fa-battery-full"></i></p>
+                                
+                                
+                                <div class="flont-user">
+                                    <h2>생년월일</h2>
+                                    <div class="Korean-date-of-birth">
+                                        <div class="year"><input class="bear" type="text" maxlength="4" placeholder="(OO년도)입력"></div>
+                                        <div class="month">
+                                            <select name="" id="" >
+                                                <option value="" class="bear" selected disabled hidden>월</option>
+                                                <!-- selected ='false' 자동값으로  disabled => 비활성화  결론: 월(거짓)에서 움직이지 않아요  -->
+                                                <!-- selected ='false' 자동값으로  disabled => 비활성화  결론: 월(거짓)에서 움직이지 않고 hidden 숨김  -->
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="Day"><input class="bear" type="text" maxlength="2" placeholder="(일)입력"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <p class="question-B">생년월일 4자 년도 입력 하시오.</p>
+                        
+                        
+                        
+                        
+                        <div class="terms-S new-name">
+                            <label for="">
+                                <p class="p-A"><i class="fa-solid fa-battery-full"></i></p>
+                                
+                                
+                                <div class="flont-user">
+                                    <h2>이름</h2>
+                                    <div class="font-size-up"><input type="text" placeholder="이름입략하시오"></div>
+                                </div>
+                            </label>
+                        </div>
+                        <p class="question-B">다시 한번 확인 부탁드립니다 회원님</p>
+                        
+                        
+                        
+                        <div class="terms-S ">
+                            <label for="">
+                                <p class="p-A"><i class="fa-solid fa-battery-full"></i></p>
+                                
+                                
+                                <div class="flont-user">
+                                    <h2>휴대전화</h2>
+                                    <div class="contact"> <select name="country">
+                                        <option value="233">가나 +233</option>
+                                        <option value="30">그리스 +30</option>
+                                        <option value="82" selected>대한민국 +82</option>
+                                        <option value="49">독일 +49</option>
+                                        <option value="960">몰디브 +960</option>
+                                        <option value="1">미국/캐나다 +1</option>
+                                        <option value="254">케나 +254</option>
+                                    </select></div>
+                                    <div class="Certification-Number">
+                                        <div class="font-size-up"><input type="text" placeholder="전화번호 입력"></div>
+                                        <button id="certification" type="button">인증번호</button>
+                                    </div>
+                                    
+                                    <div class="font-size-up"><input type="text" placeholder="인증번호 확인해주세요"></div>
+                                </div>
+                            </label>
+                        </div>
+                        <p class="question-B">다시 한번 확인 부탁드립니다 회원님</p>
+                        
+                        
+                        
+                        
+                        <div class="terms-S ">
+                            <label for="">
+                                <p class="p-A"><i class="fa-solid fa-battery-full"></i></p>
+                                
+                                
+                                <div class="flont-user num-D">
+                                    <h2>주소</h2>
+                                    <div class="address">
+                                        <div class="font-size-up"><input type="text" id="sample6_postcode" placeholder="우편번호"></div>
+                                        <button type="button"><input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br></button>
+                                    </div>
+                                    <div class="font-size-up"><input type="text" id="sample6_address" placeholder="주소"><br></div>
+                                    <div class="font-size-up"><input type="text" id="sample6_detailAddress" placeholder="상세주소"></div>
+                                    <div class="font-size-up"><input type="text" id="sample6_extraAddress" placeholder="참고항목"></div>
+                                    
+                                </div>
+                            </label>
+                        </div>
 
-                <script>
-                    let label = document.querySelectorAll('.button-on div');
+
+ 
+
+                        <p class="question-B">다시 한번 확인 부탁드립니다 회원님</p>
+                        
+                        
+                        
+                        
+                        <a href=""><div class="Customer-registration"><button type="submit">가입하기</button></div></a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </form>
+                    
+                    
+                    
+                </section>
+            </div>  
+            
+            <script>
+                let label = document.querySelectorAll('.button-on div');
                 console.log(label)
                 label.forEach(function(box){
-
+                    
                     box.addEventListener('click',function(e){
                         e.preventDefault();
                         this.querySelector('.button-name').classList.toggle('yes')
                         this.querySelector('.button-on button').classList.toggle('on')
                         
                         let inputCheck = this.querySelector('input[type="radio"]')
-
-
+                        
+                        
                         
                         if(this.querySelector('.button-name').classList.contains('yes')) {
                             inputCheck.checked = true;
                             document.querySelectorAll('.p-A')[4].classList.remove('on')
                             document.querySelector('.question-A').classList.remove('go')
-                      } else {
-                        inputCheck.checked = false;
-                        document.querySelectorAll('.p-A')[4].classList.add('on')
-                        document.querySelector('.question-A').classList.add('go')
+                        } else {
+                            inputCheck.checked = false;
+                            document.querySelectorAll('.p-A')[4].classList.add('on')
+                            document.querySelector('.question-A').classList.add('go')
+                        }
+                    })
+                    
+                })
+                let d = document.querySelectorAll('.p-A')
+                console.log(d)
+                // 아이디
+                document.querySelector('.name-ID input').addEventListener('focusout',function(){
+                    let Myself = this.value;
+                    let MyID = /^[a-z0-9]{5,8}$/;
+                    
+                    if(Myself.length == 0){
+                        document.querySelectorAll('.p-A')[0].classList.add('on')
+                    }else if(!MyID.test(Myself)){
+                        document.querySelectorAll('.p-A')[0].classList.add('off')
+                        
+                    }else{
+                        document.querySelectorAll('.p-A')[0].classList.add('up')
+                        
+                    }
+                    
+                })
+                
+                // 생년월일
+                document.querySelectorAll('.bear').forEach(function(e){
+                    e.addEventListener('focusout',function(){
+                        
+                        let year = document.querySelectorAll('.bear')[0].value;
+                        let month = document.querySelectorAll('.bear')[1].value;
+                        let Day = document.querySelectorAll('.bear')[2].value;
+                        
+                        let date = new Date();
+                        let NewDate = date.getTime();
+                        date = date.getFullYear();
+                        
+                        let TodayDate = new Date(year,month,Day);
+                        TodayDate = TodayDate.getTime();
+                        
+                        if(year.length != 4){
+                            
+                        }else if(Day.length == 0 || Day > 31 || Day <= 0){
+                            
+                        }else if(isNaN(year * month * Day)){
+                            
+                        }else if(date - year > 100){
+                            
+                        }else if(NewDate < TodayDate){
+                            
+                        }else{
+                            
+                        }
+                        
+                    })
+                })            
+                console.log(document.querySelectorAll('.bear'))
+                // 이메일
+                document.querySelector('.name-email input').addEventListener('focusout',function(){
+                    let Email = this.value;
+                    let MyEmail = /^[a-z0-9]{5,7}$/;
+                    
+                    if(Email.length == 0){
+                        document.querySelectorAll('.p-A')[3].classList.add('on')
+                        document.querySelectorAll('.p-A')[3].classList.remove('off')
+                        document.querySelectorAll('.p-A')[3].classList.remove('up')
+                        
+                    }else if(!MyEmail.test(Email)){
+                        document.querySelectorAll('.p-A')[3].classList.add('off')
+                        document.querySelectorAll('.p-A')[3].classList.remove('up')
+                        document.querySelectorAll('.p-A')[3].classList.remove('on')
+                    }else{
+                        document.querySelectorAll('.p-A')[3].classList.add('up')
+                        document.querySelectorAll('.p-A')[3].classList.remove('off')
+                        document.querySelectorAll('.p-A')[3].classList.remove('on')
+                        
                     }
                 })
                 
-            })
-            let d = document.querySelectorAll('.p-A')
-            console.log(d)
-            // 아이디
-            document.querySelector('.name-ID input').addEventListener('focusout',function(){
-                let Myself = this.value;
-                let MyID = /^[a-z0-9]{5,8}$/;
                 
-                if(Myself.length == 0){
-                    document.querySelectorAll('.p-A')[0].classList.add('on')
-                }else if(!MyID.test(Myself)){
-                    document.querySelectorAll('.p-A')[0].classList.add('off')
+                // 비밀번호
+                document.querySelector('.secret-number input').addEventListener('focusout',function(){
+                    let PW = this.value;
+                    let pwExp = /^[A-Za-z0-9`~!@#\$%\^&\*\(\)\{\}\[\]\-_=\+\\|;:'"<>,\./\?]{8,20}$/;
                     
-                }else{
-                    document.querySelectorAll('.p-A')[0].classList.add('up')
-                    
-                }
+                    if(PW.length == 0){
+                        document.querySelectorAll('.p-A')[1].classList.add('on')
+                        document.querySelectorAll('.p-A')[1].classList.remove('off')
+                        document.querySelectorAll('.p-A')[1].classList.remove('up')
+                        
+                    }else if(!pwExp.test(PW)){
+                        document.querySelectorAll('.p-A')[1].classList.add('off')
+                        document.querySelectorAll('.p-A')[1].classList.remove('up')
+                        document.querySelectorAll('.p-A')[1].classList.remove('on')
+                        
+                    }else{
+                        document.querySelectorAll('.p-A')[1].classList.add('up')
+                        document.querySelectorAll('.p-A')[1].classList.remove('off')
+                        document.querySelectorAll('.p-A')[1].classList.remove('on')
+                    }
+                })
                 
-            })
-            
-            
-            
-            
-            // 이메일
-            document.querySelector('.name-email input').addEventListener('focusout',function(){
-                let Email = this.value;
-                let MyEmail = /^[a-z0-9]{5,7}$/;
                 
-                if(Email.length == 0){
-                    document.querySelectorAll('.p-A')[3].classList.add('on')
-                    document.querySelectorAll('.p-A')[3].classList.remove('off')
-                    document.querySelectorAll('.p-A')[3].classList.remove('up')
-                    
-                }else if(!MyEmail.test(Email)){
-                    document.querySelectorAll('.p-A')[3].classList.add('off')
-                    document.querySelectorAll('.p-A')[3].classList.remove('up')
-                    document.querySelectorAll('.p-A')[3].classList.remove('on')
-                }else{
-                    document.querySelectorAll('.p-A')[3].classList.add('up')
-                    document.querySelectorAll('.p-A')[3].classList.remove('off')
-                    document.querySelectorAll('.p-A')[3].classList.remove('on')
-
-                }
-            })
-
-
-            // 비밀번호
-            document.querySelector('.secret-number input').addEventListener('focusout',function(){
-                let PW = this.value;
-                let pwExp = /^[A-Za-z0-9`~!@#\$%\^&\*\(\)\{\}\[\]\-_=\+\\|;:'"<>,\./\?]{8,20}$/;
-
-                if(PW.length == 0){
-                    document.querySelectorAll('.p-A')[1].classList.add('on')
-                    document.querySelectorAll('.p-A')[1].classList.remove('off')
-                    document.querySelectorAll('.p-A')[1].classList.remove('up')
-                    
-                }else if(!pwExp.test(PW)){
-                    document.querySelectorAll('.p-A')[1].classList.add('off')
-                    document.querySelectorAll('.p-A')[1].classList.remove('up')
-                    document.querySelectorAll('.p-A')[1].classList.remove('on')
-
-                }else{
-                    document.querySelectorAll('.p-A')[1].classList.add('up')
-                    document.querySelectorAll('.p-A')[1].classList.remove('off')
-                    document.querySelectorAll('.p-A')[1].classList.remove('on')
-                }
-            })
-
-
-            // 재확인
-            document.querySelector('.reconfirm input').addEventListener('focusout',function(){
-                let reconfirm = this.value;
-                if(reconfirm.length == 0){
-                    document.querySelectorAll('.p-A')[2].classList.add('on')
-                    document.querySelectorAll('.p-A')[2].classList.remove('off')
-                    document.querySelectorAll('.p-A')[2].classList.remove('up')
-                }else if(reconfirm == document.querySelector('.secret-number input').value){
-                    document.querySelectorAll('.p-A')[2].classList.add('up')
-                    document.querySelectorAll('.p-A')[2].classList.remove('off')
-                    document.querySelectorAll('.p-A')[2].classList.remove('on')
-                }else{
-                    document.querySelectorAll('.p-A')[2].classList.add('off')
-                    document.querySelectorAll('.p-A')[2].classList.remove('up')
-                    document.querySelectorAll('.p-A')[2].classList.remove('on')
-
-
-                }
-            })
-
-            //    이름
-            document.querySelector('.new-name input').addEventListener('focusout',function(){
-                let Name = this.value;
-
-                let MyName = /^[가-힣]{2,5}$/;
+                // 재확인
+                document.querySelector('.reconfirm input').addEventListener('focusout',function(){
+                    let reconfirm = this.value;
+                    if(reconfirm.length == 0){
+                        document.querySelectorAll('.p-A')[2].classList.add('on')
+                        document.querySelectorAll('.p-A')[2].classList.remove('off')
+                        document.querySelectorAll('.p-A')[2].classList.remove('up')
+                    }else if(reconfirm == document.querySelector('.secret-number input').value){
+                        document.querySelectorAll('.p-A')[2].classList.add('up')
+                        document.querySelectorAll('.p-A')[2].classList.remove('off')
+                        document.querySelectorAll('.p-A')[2].classList.remove('on')
+                    }else{
+                        document.querySelectorAll('.p-A')[2].classList.add('off')
+                        document.querySelectorAll('.p-A')[2].classList.remove('up')
+                        document.querySelectorAll('.p-A')[2].classList.remove('on')
+                        
+                        
+                    }
+                })
                 
-                if(Name.length == 0 ){
-                    document.querySelectorAll('.p-A')[6].classList.add('on')
-                    document.querySelectorAll('.p-A')[6].classList.remove('off')
-                    document.querySelectorAll('.p-A')[6].classList.remove('up')
+                //    이름
+                document.querySelector('.new-name input').addEventListener('focusout',function(){
+                    let Name = this.value;
                     
-                }else if(!MyName.test(Name)){
-                    document.querySelectorAll('.p-A')[6].classList.add('off')
-                    document.querySelectorAll('.p-A')[6].classList.remove('up')
-                    document.querySelectorAll('.p-A')[6].classList.remove('on')
-                }else{
-                    document.querySelectorAll('.p-A')[6].classList.add('up')
-                    document.querySelectorAll('.p-A')[6].classList.remove('off')
-                    document.querySelectorAll('.p-A')[6].classList.remove('on')
+                    let MyName = /^[가-힣]{2,5}$/;
                     
+                    if(Name.length == 0 ){
+                        document.querySelectorAll('.p-A')[6].classList.add('on')
+                        document.querySelectorAll('.p-A')[6].classList.remove('off')
+                        document.querySelectorAll('.p-A')[6].classList.remove('up')
+                        
+                    }else if(!MyName.test(Name)){
+                        document.querySelectorAll('.p-A')[6].classList.add('off')
+                        document.querySelectorAll('.p-A')[6].classList.remove('up')
+                        document.querySelectorAll('.p-A')[6].classList.remove('on')
+                    }else{
+                        document.querySelectorAll('.p-A')[6].classList.add('up')
+                        document.querySelectorAll('.p-A')[6].classList.remove('off')
+                        document.querySelectorAll('.p-A')[6].classList.remove('on')
+                        
+                    }
+                })
+                document.querySelectorAll('input').forEach(function(input){
+                    input.addEventListener('focus', function(){
+                        this.parentNode.classList.add('on');
+                    })
+                })
+                document.querySelectorAll('input').forEach(function(input){
+                    input.addEventListener('focusout', function(){
+                        this.parentNode.classList.remove('on');
+                    })
+                })
+                
+                
+                var themeObj = {
+                    bgColor: "#4959F1", //바탕 배경색
+                    searchBgColor: "#6BE9DB", //검색창 배경색
+                    contentBgColor: "#AEE8A0", //본문 배경색(검색결과,결과없음,첫화면,검색서제스트)
+                    pageBgColor: "#63A1BE", //페이지 배경색
+                    textColor: "#6342F4", //기본 글자색
+                    queryTextColor: "#1F24EC", //검색창 글자색
+                    postcodeTextColor: "#BB59E3", //우편번호 글자색
+                    emphTextColor: "#DD3CD7", //강조 글자색
+                    outlineColor: "#5124EC" //테두리
+                };
+                
+
+                function sample6_execDaumPostcode() {
+        new daum.Postcode({
+            oncomplete: function(data) {
+                // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+                // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+                // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                var addr = ''; // 주소 변수
+                var extraAddr = ''; // 참고항목 변수
+
+                //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+                if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+                    addr = data.roadAddress;
+                } else { // 사용자가 지번 주소를 선택했을 경우(J)
+                    addr = data.jibunAddress;
+                }
+
+                // 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
+                if(data.userSelectedType === 'R'){
+                    // 법정동명이 있을 경우 추가한다. (법정리는 제외)
+                    // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+                    if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+                        extraAddr += data.bname;
+                    }
+                    // 건물명이 있고, 공동주택일 경우 추가한다.
+                    if(data.buildingName !== '' && data.apartment === 'Y'){
+                        extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                    }
+                    // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+                    if(extraAddr !== ''){
+                        extraAddr = ' (' + extraAddr + ')';
+                    }
+                    // 조합된 참고항목을 해당 필드에 넣는다.
+                    document.getElementById("sample6_extraAddress").value = extraAddr;
+                
+                } else {
+                    document.getElementById("sample6_extraAddress").value = '';
+                }
+
+                // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                document.getElementById('sample6_postcode').value = data.zonecode;
+                document.getElementById("sample6_address").value = addr;
+                // 커서를 상세주소 필드로 이동한다.
+                document.getElementById("sample6_detailAddress").focus();
             }
-        })
-                </script>
+        }).open();
+    }
+    
+    
+    
+    
+    </script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
 </body>
 </html>
