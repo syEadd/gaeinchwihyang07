@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>character 소개</title>
+    <title>버블파이터란</title>
 
     <script src="https://kit.fontawesome.com/a19afa0290.js" crossorigin="anonymous"></script>
 </head>
@@ -61,22 +61,31 @@ display: flex;
 justify-content: center;
 align-items: center;
 width: 100%;
-height: 700px;
+height: 2700px;
 border-top:2px solid blue ;
 background-color: rgba(93, 145, 242, 0.2);
 
 }
 .Bubble-M{
-   width: 2000px;
-   height: 600px;
+   width: 1200px;
+   height: 2600px;
    border-radius: 20px;
    background-color: #FFF;
    border: 2px solid gold; 
 }
 
+.number-A{
+    margin-left: 60px;
+    padding: 16px;
+    font-size: 26px;
+    font-weight: 600;
+    color: skyblue;
+    
+}
 
-
-
+.main-In-order{
+    margin: 30px 0;
+}
 
 
 
@@ -213,7 +222,7 @@ li{
 .Bubble-Fighter{
     width: 100%;
     height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 /* 중요한 폰트 */
 .Bubble-main h1{
@@ -255,7 +264,7 @@ border: 3px solid blue;
     display: flex;
     justify-content: space-between;
     padding: 5rem;
-    border: 2px solid green;
+    
 }
 .Bubble-main{
     position: relative;
@@ -381,13 +390,370 @@ aside nav.on{
  
     /* 이 다음 부터 */
 
+.Game-menu{
+display: flex;
+border-bottom: 3px solid blue;
+width: 90%;
+margin: 0 auto;
+}
+.Game-menu li a{
+    text-decoration: none;
+    padding: 16px;
+    color: #666;
+    
+}
+.Game-menu li a.on{
+    color: blue;
+}
+.Game-menu li a i{
+    padding-left: 10px;
 
+}
+.Game-menu li{
+   margin-left: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    /* border: 3px solid blue; */
+    border-right:  3px solid blue;
+    border-top: 3px solid blue ;
+    border-left:  3px solid blue;
+}
+.Game-menu li.off{
+    
+    border-bottom:3px solid #FFF;
+    margin-bottom: -3px;
 
+}
+.Basic-menu{
+    display: none;
+    width: 90%;
+    height: 500px;
+    align-items: center;
+    margin: 0 auto;
+   justify-content: space-between;
+   
+}
+.Basic-menu.on{
+    display: flex;
+}
 
+.Basic-setting{
+    margin: 30px;
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
+   border-radius: 20px;
+   overflow: hidden;
+    align-items: center;
+    width: 300px;
+    height: 400px;
+    border: 2px solid steelblue;
+}
+.Basic-setting li{
+    width: 90%;
+    height: 200px;
+    border-radius: 20%;
+    overflow: hidden;
+    
+}
+.Basic-setting li img{
+    width: 100%;
+    height: 100%;
+}
+.font-Size{
+    font-size: 20px;
+    color: deepskyblue;
+    padding: 20px;
+}
+.font-Size-up{
+    color: blue;
+    font-weight: 600;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    width: 100%;
+    height: 30px;
+    background-color: steelblue;
+    margin-bottom: 30px;
+}
+/* 캐릭터 슬라이드 */
+.In-order{
+   
+   
+    display: flex;
+    width: 1100px;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    
+    margin: 0 auto;
+}
+.Main-Character{
+    flex-grow: 1;
+    transition: flex 500ms;
+    overflow: hidden;
+  
+    
+}
+.Main-Character:hover{
+    flex-grow: 30;
+}
+.Main-Character a{
+    height: 500px;
+}
+.Main-Character img{
+    /* flex-grow: 1; */
+    width: 100%;
+    height: 100%;
+}
+.Main-Character:nth-child(1){
+    background-color: skyblue;
+}
+.Main-Character:nth-child(2){
+    background-color: rgb(180, 234, 30,0.5);
+}
+.Main-Character:nth-child(3){
+    background-color: rgb(180, 27, 185,0.5);
+}
+.Main-Character:nth-child(4){
+    background-color: rgba(200, 232, 71, 0.5);
+}
+/* 가운데 글자 */
+.Moving-Protagonist{
+    padding: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+.Moving-Protagonist div{
+    font-weight: 600;
+    align-items: center;
 
+    display: flex;
+    margin-bottom: 10px;
+   
+}
+.Moving-Protagonist div h2{
+    font-size: 40px;
+    padding: 10px;
+    color: #666;
+}
+.Moving-Protagonist h3{
+    color: #666;
+    font-size: 30px;
+}
+.largest-letters{
+font-size: 20px;
+}
+.largest-letters strong{
+    color: deepskyblue;
+    padding-left: 10px;
+}
+.letters{
+    margin: 30px 0;
+    width: 600px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+/* 물풀선 */
+.Main-Balloon{
+    position: relative;
+    height: 300px;
+}
+.water-Balloon{
+    
+    width: 90%;
+    height: 200px;
+    border-radius: 30px;
+    background-color: rgb(141, 212, 240,0.5);
+    margin: 0 auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    overflow: hidden;
+}
+.water-Balloon p{
+    color: cornflowerblue;
+font-weight: 600;
+font-size: 20px;
+padding: 10px;
+flex-wrap:wrap;
+width: 850px;
+height: 200px;
+display: flex;
+align-items: center;
+padding: 20px;
+}
+.Balloon{
+    position: absolute;
+    top: 20px;
+    left: 90px;
+    border-radius: 30px;
+    margin-bottom: 400px;
+    width: 280px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: dodgerblue;
+    color: darkslategray;
+}
+.friends-c{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    z-index: 10;
+    right: 300px;
+    bottom: 460px; 
+    animation: friend3 4s infinite  ease-in-out;
+}
+.friends-c img{
+    transform: scale(1.2);
+    width: 100%;
+    height: 100%;
 
+}
+.friends-A{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    z-index: 10;
+    right: 300px;
+    bottom: 250px;
+    animation: friend2 4s infinite  ease-in-out;
+}
+.friends-A img{
+    width: 100%;
+    height: 100%;
+}
+.friends-B{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    z-index: 10;
+    right: 50px;
+    bottom: 330px;
+    animation: friend 5s infinite  ease-in-out;
+}
+.friends-B img{
+    width: 100%;
+    height: 100%;
+}
+@keyframes friend {
+    0%{
+        transform: translate(0,0);
+    }50%{
+        transform: translate(-50px,50px);
+    }100%{
+        transform: translate(0,0);
+    }
+}
+@keyframes friend2 {
+    0%{
+        transform: translate(0,0);
+    }50%{
+        transform: translate(20px,-20px);
+    }100%{
+        transform: translate(0px,0px);
+    }
+}
+@keyframes friend3 {
+    0%{
+        transform: translate(0,0);
+    }50%{
+        transform: translate(90px,0);
+    }100%{
+        transform: translate(0px,0px);
+    }
+}
+/* 제목 폰트 */
+.Game-Font{
+    color: darkblue;
+    display: flex;
+    font-size: 40px;
+    padding: 40px;
+}
+.Game-Font i{
+    padding-right: 10px;
 
+}
+.Game-Font strong{ 
+    color: dodgerblue;
+}
+/* 클릭2 */
+.action{
+    display: none;
+    width: 90%;
+    height: 300px;
+    border-radius: 20px;
+    border: 2px solid rgb(128, 128, 128,0.5);
+    margin: 20px auto;
+    overflow: hidden;
+   
 
+}
+.action.on{
+    display: block;
+}
+.action-Font{
+
+    font-weight: 600;
+    color: #fff;
+    font-size: 26px;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(128, 128, 128,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-M{
+    display: flex;
+    width: 50%;
+    height: 250px;   
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.action-Main{display: flex;
+    justify-content: space-between;
+}
+.action-Img{
+    width: 800px;
+    height: 240px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.action-Img img{
+    object-fit: cover;
+    width: 100%;
+    height: 240px;
+}
+.action-Font-S p{
+    padding: 10px;
+    flex-wrap: wrap;
+    width: 300px;
+    color: dodgerblue;
+    font-size: 20px;
+    margin-bottom: 10px;
+
+}
+.action-Font-S p i{
+    padding: 10px;
+    color: darkblue;
+}
+.action-S img{
+    width: 530px;
+    height: 250px;
+}
 </style>
 <body>
     <div class="Bubble-Fighter">
@@ -511,17 +877,159 @@ aside nav.on{
 
 
             <div class="character collection">
+                <p class="number-A">버블파이터의 모든 것! 버블파이터만의 특징과 재미를 소개합니다.</p>
 
                 <!-- 시작 -->
+                <div class="main-In-order">
+                    <div class="In-order">
+                        <div class="Main-Character">
+                            <a href=""><img src="./소개 이미지/다오.png" alt=""></a>
+                        </div>
+                        <div class="Main-Character">
+                            <a href=""><img src="./소개 이미지/디지니.png" alt=""></a>
+                        </div>
+                        <div class="Main-Character">
+                            <a href=""><img src="./소개 이미지/루시.png" alt=""></a>
+                        </div>
+                        <div class="Main-Character">
+                            <a href=""><img src="./소개 이미지/모스.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="Moving-Protagonist">
+                    <div class="friends-A">
+                        <a href=""><img src="./img/캐릭15.png" alt=""></a>
+                    </div>
+
+                    <div class="friends-B">
+                        <a href=""><img src="./img/캐릭13.png" alt=""></a>
+                    </div>
+
+                    <div class="friends-c">
+                        <a href=""><img src="./img/캐릭6.png" alt=""></a>
+                    </div>
+                    <div class="">
+                        <h1>버블파이터</h1><h2>는</h2>
+                    </div>
+                    <h3>물총으로 상대방을 공격하고,물에 가둔 터뜨려 점수를 얻는 캐주얼 TPS 게임입니다.</h3>
+                    <li class="letters">
+                        <div class="largest-letters">
+                            <p>물총으로 서로 돕고 싸우는 슈팅 게임!</p><strong>버블파이터</strong>
+                        </div>
+                        <p>다오, 디지니, 배찌 등등 이미 BnB와 카트라이더를 통해 친숙해진 캐릭터들이 이번엔 물총을 들었습니다.
+                            물총을 쏘며 상대 팀을 공격하고, 버블에 갇힌 우리 편을 돕는 귀엽고 밝은 분위기의
+                            비폭력적인 게임 플레이가 특징입니다.</p>
+                    </li>
+
+                    <li class="letters">
+                        <div class="largest-letters">
+                            <p>다양한 액션을 통한 신나는 플레이!</p><strong>버블파이터</strong>
+                        </div>
+                        <p>기본적인 슈팅 액션에 달리기, 벽에 붙기, 구르기 등을 더해 보다 신나는 플레이를 즐길 수 있습니다.</p>
+                    </li>
+
+                    <div class="Main-Balloon">
+                        <div class="Balloon">TPS(Third Person Shooter)란?</div>
+                        <div class="water-Balloon">
+                            <p>게임상에 등장하는 캐릭터의 시점에서 바라보는 모양이 아닌, 캐릭터의 주변에서 관찰하는 모양인
+                                3인칭 관찰자 시점에서 진행하는 게임 장르를 말합니다. 게임상에 등장하는 캐릭터의 시점에서 바라보는 방식인
+                                FPS(First Person Shooter)와 달리 자기 캐릭터가 어디에 있는지 볼 수 있어 게임 진행이 쉽고,
+                                자기 캐릭터의 움직임을 모두 볼 수 있어 재미있는 플레이가 가능합니다.</p>
+                        </div>
+                    </div>
+
+
+                </div>
 
 
 
 
 
+                <main class="main-B">
+                    <div class="Game-Font"><i class="fa-solid fa-wand-magic-sparkles"></i><p>이제 <strong>버블파이터</strong>의 <strong>특징</strong>을 알아보아요.</p></div>
+                    <ul class="Game-menu">
+                        <li class=""><a href="">게임 규칙<i class="fa-solid fa-caret-down"></i></a></li>
+                        <li><a href="">게임 액션<i class="fa-solid fa-caret-down"></i></a></li>
+                    </ul>
+                    <div class="Basic-menu-B">
+                        <div class="action">
+                            <p class="action-Font">자신을 가로막는 벽에 붙어 적을 몰래 지켜볼 수 있으며</p>
+                            <div class="action-Main">
+                                <div class="action-M">
+                                    <div class="action-Img"><a href=""><img src="./img/003.jpg" alt=""></a></div>
+                                    <div class="action-Font-S">
+                                        <p><i class="fa-solid fa-bomb"></i>벽붙기</p>
+                                        <p>벽에 붙기’ 아이콘이
+                                            표시되는 엄폐물에서 W 키를
+                                            재빨리 두 번 눌러 보세요.
+                                            벽에 붙기가 가능합니다.</p>
+                                    </div>
+                                </div>
+                                <div class="action-M">
+                                    <div class="action-Img"><a href=""><img src="./img/005.jpg" alt=""></a></div>
+                                    <div class="action-Font-S">
+                                        <p><i class="fa-solid fa-bomb"></i>벽에 붙어 빼꼼</p>
+                                        <p>벽붙기에서 A 키나 D 키를
+                                            누르면 왼쪽이나 오른쪽으로 빼꼼
+                                            내다볼 수 있습니다. 그 상태에서
+                                            물총을 쏘고 재빨리 다시 숨을 수
+                                            있습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="action">
+                            <p class="action-Font">벽을 뛰어넘거나 벽에서 갑자기 튀어 나가 적을 공격할 수도 있습니다.</p>
+                            <div class="action-Main">
+                                
+                                <div class="action-M">
+                                    <div class="action-Img"><a href=""><img src="./img/006.jpg" alt=""></a></div>
+                                    <div class="action-Font-S">
+                                        <p><i class="fa-solid fa-bomb"></i>빼꼼벽</p>
+                                        <p>어떤 엄폐물은 벽붙기에서 뛰어넘을 수도 있습니다. 그런 아이콘이 표시되면 W 키를 눌러 벽에 매달린 후 스페이스바를 누르면 벽을 뛰어넘습니다.</p>
+                                    </div>
+                                </div>
+                                <div class="action-M">
+                                    <div class="action-S"><a href=""><img src="./img/001.webp" alt=""></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="Basic-menu">
+                        <div class="Basic-setting">
+                            <p class="font-Size-up">버블</p>
+                            <li><a href=""><img src="./img/000.jpg" alt=""></a></li>
+                            <p class="font-Size">HP가 0이 되면 물방울에 갇혀 버블 상태가 됩니다. 내가 버블이 되면 도망쳐 살아나야 하고, 상대를 버블로 만들었다면 버블을 터뜨려 점수를 얻을 수 있습니다.</p>
+                        </div>
+
+                        <div class="Basic-setting">
+                            <p class="font-Size-up">팡</p>
+                            <li><a href=""><img src="./img/001.webp" alt=""></a></li>
+                            <p class="font-Size">물방울에 갇혀 버블이 된 상대를 터트려 점수를 얻습니다. 버블을 터뜨리려면 버블
+                                가까이 다가가 마우스 왼쪽 버튼을
+                                클릭합니다.</p>
+                        </div>
+
+                        <div class="Basic-setting">
+                            <p class="font-Size-up">헬프</p>
+                            <li><a href=""><img src="./img/002.jpg" alt=""></a></li>
+                            <p class="font-Size">물방울에 갇혀 버블이 된 우리 편을 살려줄 수 있습니다. 버블이 된 우리 편에 가까이 가서 부딪혀 헬프합니다.</p>
+                        </div>
 
 
 
 
+                    </div>
+
+
+                </main>
 
 
 
@@ -626,8 +1134,35 @@ aside nav.on{
         document.querySelector('aside nav').classList.remove('on')
 
     })
+    
+    // 클릭 이벤트
 
+    document.querySelectorAll('.Game-menu li')[0].addEventListener('click',function(e){
+        e.preventDefault()
+        document.querySelectorAll('.Game-menu li')[1].classList.remove('off');
+        document.querySelectorAll('.Game-menu li a')[1].classList.remove('on');
+        document.querySelectorAll('.Game-menu li')[0].classList.add('off');
+        document.querySelectorAll('.Game-menu li a')[0].classList.add('on');
+        document.querySelector('.Basic-menu').classList.add('on')
+        document.querySelectorAll('.action')[0].classList.remove('on')
+        document.querySelectorAll('.action')[1].classList.remove('on')
+    })
 
+    document.querySelectorAll('.Game-menu li')[1].addEventListener('click',function(e){
+        e.preventDefault()
+        document.querySelectorAll('.action')[0].classList.add('on')
+        document.querySelectorAll('.action')[1].classList.add('on')
+        document.querySelector('.Basic-menu').classList.remove('on')
+        document.querySelectorAll('.Game-menu li')[0].classList.remove('off');
+        document.querySelectorAll('.Game-menu li a')[0].classList.remove('on');
+        document.querySelectorAll('.Game-menu li a')[1].classList.add('on');
+        
+      
+        this.classList.add('off');
+        
+    })
+
+    
 
    </script>
 </div>
